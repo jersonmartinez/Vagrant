@@ -1,17 +1,3 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "debian/jessie64"
 end
-
-
-# Vagrant.configure("2") do |config|
-#   	config.vm.box = "debian/jessie64"
-#   	config.vm.hostname = "http"
-# 	config.vm.network "forwarded_port", guest: 80, host: 8080
-
-# 	config.vm.provider "virtualbox" do | vb |
-# 		vb.name = "PortsRedirections"
-# 		vb.memory = "512"
-# 		vb.cpus = "2"
-# 		vb.linked_clone = true
-# 	end
-# end
