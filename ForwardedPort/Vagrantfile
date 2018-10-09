@@ -9,4 +9,6 @@ Vagrant.configure("2") do |config|
         vb.cpus = "2"
         vb.linked_clone = true
     end
+
+    config.vm.provision :shell, inline: "sudo apt-get update && sudo apt-get -y install apache2"
 end

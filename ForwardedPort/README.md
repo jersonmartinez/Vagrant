@@ -27,6 +27,9 @@ Vagrant.configure("2") do |config|
         vb.cpus = "2"
         vb.linked_clone = true
     end
+
+    #This is the important line
+    config.vm.provision :shell, inline: "sudo apt-get update && sudo apt-get -y install apache2"
 end
 ```
 
@@ -34,3 +37,5 @@ end
 ```
 vagrant up
 ```
+
+**Query URL: [127.0.0.1:8080](127.0.0.1:8080)**
