@@ -1,6 +1,6 @@
 ## Documentation
 
-### Initial test on the creation of a virtual machine.
+### Initial test on the creation of a virtual machine
 
 Initialize the virtual machine with the box: `debian/jessie64` to `VirtualBox`.
 
