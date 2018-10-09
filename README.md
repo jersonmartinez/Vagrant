@@ -52,6 +52,29 @@ config.vm.network "forwarded_port", guest: 80, host: 8080
 ```
 For more details, go here: [ForwardedPort/](https://github.com/SideMasterGM/Vagrant/tree/master/ForwardedPort)
 
+**Configure disks**
+```ruby
+firt_disk   = 'tmp/disk.vdi'
+controller  = "SATA Controller"
+device      = 0
+type        = "hdd"
+
+unless File.exist?(firt_disk)
+    vb.customize ['createhd', 
+            '--filename',   firt_disk, 
+            '--size',       300 * 1024]
+end
+
+vb.customize ['storageattach', :id, 
+            '--storagectl',      "#{controller}", 
+            '--port',            1, 
+            '--device',          "#{device}", 
+            '--type',            "#{type}", 
+            '--medium',          firt_disk]
+
+```
+For more details, go here: [ConfigDisk/](https://github.com/SideMasterGM/Vagrant/tree/master/ConfigDisk)
+
 **Start the image**
 ```
 vagrant up
