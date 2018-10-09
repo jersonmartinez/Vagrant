@@ -40,6 +40,11 @@ vb.cpus = "2"
 ```
 For more details, go here: [ConfigProvidersOnVirtualBox/](https://github.com/SideMasterGM/Vagrant/tree/master/ConfigProvidersOnVirtualBox)
 
+**Passing the command instructions to the virtual machine**
+```ruby
+config.vm.provision :shell, inline: "sudo apt-get update && sudo apt-get -y install apache2"
+```
+
 **Apply linked clone**
 ```ruby
 vb.linked_clone = true
