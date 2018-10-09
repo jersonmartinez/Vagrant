@@ -63,6 +63,11 @@ Vagrant.configure("2") do |config|
 end
 ```
 
+**The disk controller is found as follows**
+```
+VBoxManage showvminfo [uid|name] | grep "SATA"
+```
+
 **Adding disk**
 ```ruby
 firt_disk   = 'tmp/disk.vdi'
@@ -88,4 +93,15 @@ vb.customize ['storageattach', :id,
 **Start the image**
 ```
 vagrant up
+```
+
+**Access by SSH**
+```
+vagrant ssh
+```
+
+**Check the disks**
+```
+lsblk
+sudo fdisk -l
 ```
