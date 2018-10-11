@@ -1,0 +1,54 @@
+.slideout {
+    position: fixed;
+    top: 40%;
+    right: 0;
+    width: 35px;
+    padding: 12px 0;
+    text-align: center;
+    background: #F60600;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 5px 0 0  5px;
+}
+.slideout {
+	cursor:pointer;
+}
+.slideout_inner {
+    background: #fff none repeat scroll 0 0;
+    height: 100%;
+    right: -300px;
+    padding: 0;
+    position: fixed;
+    text-align: left;
+    top: 0;
+    transition-duration: 0.5s;
+    width: 300px;
+}
+.slideopen{
+	right: 300px;
+}
+.inneropen{
+    right: 0;
+}
+.simply-scroll-list img {
+		display: table;
+	}
+#feedframe {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.lb-number {
+    display: none !important;
+}
+#instafeed  a {
+    display: inline-block;
+    float: left;
+}
