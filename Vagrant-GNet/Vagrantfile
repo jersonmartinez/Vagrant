@@ -1,0 +1,36 @@
+Vagrant.configure("2") do |config|
+
+    config.vm.define "gnet_db" do |gnet_db|
+        gnet_db.vm.box = "ubuntu/xenial64"
+        gnet_db.vm.hostname = "gnet-db"
+    
+        gnet_db.vm.provider "virtualbox" do |vb|
+            vb.name = "DB"
+            vb.memory = "2048"
+            vb.cpus = "2"
+            vb.linked_clone = true
+        end
+
+        gnet_db.vm.network "private_network", ip: "10.0.100.102"
+        gnet_db.vm.provision "shell", path: "ProvisionScripts/db.sh"
+    end
+
+    config.vm.define "gnet_web" do |gnet_web|
+        gnet_web.vm.box = "ubuntu/xenial64"
+        gnet_web.vm.hostname = "gnet-web"
+        gnet_web.vm.synced_folder ".", "/vagrant", type: "rsync"
+
+        gnet_web.vm.provider "virtualbox" do |vb|
+            vb.name = "GNet"
+            vb.memory = "4096"
+            vb.cpus = "2"
+            vb.linked_clone = true
+        end
+        
+        gnet_web.vm.network "public_network", bridge: "wlan0"
+        gnet_web.vm.network "private_network", ip: "10.0.100.101"
+        
+        gnet_web.vm.provision "shell", path: "ProvisionScripts/web.sh"
+    end
+
+end
