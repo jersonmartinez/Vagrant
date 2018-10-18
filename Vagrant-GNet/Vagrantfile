@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
 
-    config.vm.define "gnet_db" do |gnet_db|
+    config.vm.define "gnet_db", primary: true do |gnet_db|
         gnet_db.vm.box = "ubuntu/xenial64"
         gnet_db.vm.hostname = "gnet-db"
     
