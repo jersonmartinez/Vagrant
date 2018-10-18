@@ -11,8 +11,6 @@ Yellow='\033[0;33m'       # Yellow
 Purple='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 
-export DEBIAN_FRONTEND="noninteractive"
-
 # Ruta absoluta donde se agregará el proyecto.
 DirStorage="/var/www/html"
 
@@ -29,8 +27,8 @@ DBPASSWD=root
 function LinkDirs(){
     echo -e "$Cyan \n--- {Asignando permisos y creando un enlace simbólico} ---\n $Color_Off"
     # Asignando permisos y creando un enlace simbólico
-    chmod 0777 -R -f $DirShared
-    ln -fs $DirShared $DirStorage
+    sudo chmod 777 -R -f $DirShared
+    sudo ln -fs $DirShared $DirStorage
 }
 
 function UpdateHost(){
@@ -54,11 +52,11 @@ function InstallWebServer(){
 function InstallFirewall(){
     echo -e "$Cyan \n--- {Instalando Firewall [UFW]} ---\n $Color_Off"
     # Instalando Firewall
-    sudo apt-get install -y ufw
+    sudo apt-get install -y ufw >> /var/log/vm_build.log 2>&1
 
     # Permitiendo el tráfico
-    sudo ufw allow http
-    sudo ufw allow https
+    sudo ufw allow http >> /var/log/vm_build.log 2>&1
+    sudo ufw allow https >> /var/log/vm_build.log 2>&1
 }
 
 function InstallPHP(){
@@ -89,7 +87,28 @@ function InstallPHP(){
     sudo apt-get install -y php-ssh2 >> /var/log/vm_build.log 2>&1
 }
 
+function ConfigurePHP(){
+    echo -e "$Cyan \n--- {Configurando PHP [a2enmod rewrite]} ---\n $Color_Off"
+    # Habilitando mod-rewrite
+    sudo a2enmod rewrite >> /var/log/vm_build.log 2>&1
+
+    echo -e "$Cyan \n--- {Configurando PHP [Apache Override All]} ---\n $Color_Off"
+    # Permitiendo a Apache Override All
+    sudo sed -i "s/AllowOverride None/AllowOverride All/g" /etc/apache2/apache2.conf
+
+    # Permisos
+    echo -e "$Cyan \n--- Permiso para /var/www ---\n $Color_Off"
+    sudo chown -R www-data:www-data /var/www/html/
+    echo -e "$Green \n--- Permisos establecidos ---\n $Color_Off"
+
+    echo -e "$Cyan \n--- {Configurando PHP [Reiniciando Apache]} ---\n $Color_Off"
+    # Reiniciar Apache
+    sudo service apache2 restart
+}
+
 function InstallPHPMyAdmin(){
+    export DEBIAN_FRONTEND="noninteractive"
+
     echo -e "$Cyan \n--- {Instalando PHP [Instalando PHPMyAdmin]} ---\n $Color_Off"
     # Instala PHPMyAdmin
     sudo apt-get install -yq phpmyadmin
@@ -102,25 +121,8 @@ function InstallPHPMyAdmin(){
     sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD"
     sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD"
     sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none"
-}
 
-function ConfigurePHP(){
-    echo -e "$Cyan \n--- {Configurando PHP [a2enmod rewrite]} ---\n $Color_Off"
-    # Habilitando mod-rewrite
-    a2enmod rewrite >> /var/log/vm_build.log 2>&1
-
-    echo -e "$Cyan \n--- {Configurando PHP [Apache Override All]} ---\n $Color_Off"
-    # Permitiendo a Apache Override All
-    sed -i "s/AllowOverride None/AllowOverride All/g" /etc/apache2/apache2.conf
-
-    # Permisos
-    echo -e "$Cyan \n--- Permiso para /var/www ---\n $Color_Off"
-    sudo chown -R www-data:www-data /var/www
-    echo -e "$Green \n--- Permisos establecidos ---\n $Color_Off"
-
-    echo -e "$Cyan \n--- {Configurando PHP [Reiniciando Apache]} ---\n $Color_Off"
-    # Reiniciar Apache
-    sudo service apache2 restart
+    echo -e "$Yellow \n--- {Instalación Finalizada [FIN del proceso]} ---\n $Color_Off"
 }
 
 UpdateHost
@@ -128,4 +130,5 @@ BasePackages
 InstallWebServer
 LinkDirs
 InstallPHP
+ConfigurePHP
 InstallPHPMyAdmin
