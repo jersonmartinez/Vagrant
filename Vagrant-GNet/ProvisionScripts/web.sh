@@ -17,12 +17,6 @@ DirStorage="/var/www/html"
 # Ruta del directorio compartido
 DirShared="/vagrant/GNet"
 
-# Configuraciones
-DBHOST=10.0.100.102
-DBNAME=gnet
-DBUSER=root
-DBPASSWD=root
-
 #Crea los directorios que conforman la ruta $DirStorage
 function LinkDirs(){
     echo -e "$Cyan \n--- {Asignando permisos y creando un enlace simbólico} ---\n $Color_Off"
@@ -121,7 +115,9 @@ function InstallPHPMyAdmin(){
     sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD"
     sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD"
     sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none"
+}
 
+function Finish(){
     echo -e "$Yellow \n--- {Instalación Finalizada [FIN del proceso]} ---\n $Color_Off"
 }
 
@@ -131,4 +127,4 @@ InstallWebServer
 LinkDirs
 InstallPHP
 ConfigurePHP
-InstallPHPMyAdmin
+Finish

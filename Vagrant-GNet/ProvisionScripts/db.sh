@@ -12,7 +12,7 @@ Purple='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 
 # Configuraciones
-DBHOST=10.0.100.102
+DBHOST=192.168.0.10
 DBNAME=gnet
 DBUSER=root
 DBPASSWD=root
@@ -68,7 +68,12 @@ function ConfigureMySQL(){
     sudo systemctl restart mysql.service
 }
 
+function Finish(){
+    echo -e "$Yellow \n--- {Instalación Finalizada [FIN del proceso]} ---\n $Color_Off"
+}
+
 UpdateHost
 BasePackages
 InstallMySQL
 ConfigureMySQL
+Finish
