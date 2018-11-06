@@ -22,6 +22,7 @@ function LinkDirs(){
     echo -e "$Cyan \n--- {Asignando permisos y creando un enlace simbólico} ---\n $Color_Off"
     # Asignando permisos y creando un enlace simbólico
     sudo chmod 777 -R -f $DirShared
+    sudo chmod 777 -R -f $DirStorage
     sudo ln -fs $DirShared $DirStorage
 }
 
