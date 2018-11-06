@@ -11,6 +11,8 @@ Yellow='\033[0;33m'       # Yellow
 Purple='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 
+WebServer="apache2"
+
 # Ruta absoluta donde se agregará el proyecto.
 DirStorage="/var/www/html"
 
@@ -34,7 +36,7 @@ function UpdateHost(){
 
 function BasePackages(){
     echo -e "$Cyan \n--- {Instalando paquetes base [vim, git y debconf-utils]} ---\n $Color_Off"
-    sudo apt-get install -y vim git debconf-utils >> /var/log/vm_build.log 2>&1
+    sudo apt-get install -y git debconf-utils build-essential binutils-doc >> /var/log/vm_build.log 2>&1
 }
 
 function InstallWebServer(){
@@ -102,20 +104,26 @@ function ConfigurePHP(){
 }
 
 function InstallPHPMyAdmin(){
-    export DEBIAN_FRONTEND="noninteractive"
-
-    echo -e "$Cyan \n--- {Instalando PHP [Instalando PHPMyAdmin]} ---\n $Color_Off"
-    # Instala PHPMyAdmin
-    sudo apt-get install -yq phpmyadmin
+    # export DEBIAN_FRONTEND="noninteractive"
     
     echo -e "$Cyan \n--- {Instalando PHP [PHPMyAdmin - Configurando entrada sobre las credenciales]} ---\n $Color_Off"
     # Configura las credenciales que pide en paquete
-    sudo dpkg-reconfigure --frontend=noninteractive phpmyadmin
-    sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/dbconfig-install boolean true"
-    sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/app-password-confirm password $DBPASSWD"
-    sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD"
-    sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD"
-    sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none"
+    echo 'phpmyadmin phpmyadmin/dbconfig-install boolean true' | debconf-set-selections
+    echo 'phpmyadmin phpmyadmin/app-password-confirm password $DBPASSWD' | debconf-set-selections
+    echo 'phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD' | debconf-set-selections
+    echo 'phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD' | debconf-set-selections
+    echo 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect $WebServer' | debconf-set-selections
+
+    # sudo dpkg-reconfigure --frontend=noninteractive phpmyadmin
+    # sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/dbconfig-install boolean true"
+    # sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/app-password-confirm password $DBPASSWD"
+    # sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD"
+    # sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD"
+    # sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none"
+
+    echo -e "$Cyan \n--- {Instalando PHP [Instalando PHPMyAdmin]} ---\n $Color_Off"
+    # Instala PHPMyAdmin
+    sudo apt-get install -y phpmyadmin
 }
 
 function Finish(){
@@ -128,4 +136,5 @@ InstallWebServer
 LinkDirs
 InstallPHP
 ConfigurePHP
+InstallPHPMyAdmin
 Finish
