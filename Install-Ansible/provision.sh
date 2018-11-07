@@ -1,4 +1,6 @@
 #!/bin/bash
+Cyan='\033[0;36m'         # Cyan
+
 # Update server
 apt-get update
 apt-get upgrade -y 
@@ -6,6 +8,13 @@ apt-get upgrade -y
 apt-get -y install build-essential binutils-doc git -y
 # Install apache
 apt-get install apache2 -y
+
+#Install Ansible
+echo -e "$Cyan \n--- {Instalando Ansible} ---\n $Color_Off"
+sudo apt-add-repository -y ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible -y
+
 #Install PHP
 apt-get install php5 libapache2-mod-php5 php5-cli php5-mysql -y
 # Install MySQL
