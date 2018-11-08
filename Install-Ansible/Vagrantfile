@@ -16,6 +16,8 @@ Vagrant.configure("2") do |config|
 
         controller.vm.provision "shell", inline: <<-SHELL
             sed -i 's/PasswordAuthentication/#PasswordAuthentication/g' /etc/ssh/sshd_config
+            sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
+            echo -e "root\nroot\n" | sudo passwd root
             service ssh restart
         SHELL
     end
@@ -35,6 +37,29 @@ Vagrant.configure("2") do |config|
 
         node.vm.provision "shell", inline: <<-SHELL
             sed -i 's/PasswordAuthentication/#PasswordAuthentication/g' /etc/ssh/sshd_config
+            sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
+            echo -e "123\n123\n" | sudo passwd root
+            service ssh restart
+        SHELL
+    end
+
+    config.vm.define "node-two" do |node_two|
+        node_two.vm.box = "ubuntu/xenial64"
+        node_two.vm.hostname = "node-two-jerson-martinez"
+        node_two.vm.network "private_network", ip: "192.168.33.12"
+        node_two.vm.synced_folder ".", "/vagrant", type: "rsync"
+
+        node_two.vm.provider "virtualbox" do |vb|
+            vb.name = "Ansible-Node-Two"
+            vb.memory = "1024"
+            vb.cpus = "2"
+            vb.linked_clone = true
+        end
+
+        node_two.vm.provision "shell", inline: <<-SHELL
+            sed -i 's/PasswordAuthentication/#PasswordAuthentication/g' /etc/ssh/sshd_config
+            sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
+            echo -e "1234\n1234\n" | sudo passwd root
             service ssh restart
         SHELL
     end
