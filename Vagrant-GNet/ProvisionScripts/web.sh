@@ -11,6 +11,7 @@ Yellow='\033[0;33m'       # Yellow
 Purple='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 
+# Servidor Web utilizado
 WebServer="apache2"
 
 # Ruta absoluta donde se agregará el proyecto.
@@ -113,7 +114,13 @@ function InstallPHPMyAdmin(){
     echo 'phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD' | debconf-set-selections
     echo 'phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD' | debconf-set-selections
     echo 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect $WebServer' | debconf-set-selections
-
+    
+    # echo -e "$Cyan \n--- {Instalando PHP [Levantando proceso en segundo plano]} ---\n $Color_Off"
+    # fg
+    
+    echo -e "$Cyan \n--- {Instalando PHP [Reconfigurando...]} ---\n $Color_Off"
+    # dpkg --configure -a
+    # sudo dpkg --configure -a
     # sudo dpkg-reconfigure --frontend=noninteractive phpmyadmin
     # sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/dbconfig-install boolean true"
     # sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/app-password-confirm password $DBPASSWD"
