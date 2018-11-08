@@ -68,6 +68,18 @@ function ConfigureMySQL(){
     sudo systemctl restart mysql.service
 }
 
+function ConfigSSH(){
+    echo -e "$Cyan \n--- {Configurando SSH Server [Habilitando las directivas: PasswordAuthentication, PermitRootLogin]} ---\n $Color_Off"
+    sed -i 's/PasswordAuthentication/#PasswordAuthentication/g' /etc/ssh/sshd_config
+    sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
+    service ssh restart
+}
+
+function AssignUserPassword(){
+    echo -e "$Cyan \n--- {Asignando contraseña a un usuario [Credenciales-> Username: $2, Password: $1]} ---\n $Color_Off"
+    echo -e "$1\n$1\n" | sudo passwd $2
+}
+
 function Finish(){
     echo -e "$Yellow \n--- {Instalación Finalizada [FIN del proceso]} ---\n $Color_Off"
 }
@@ -76,4 +88,6 @@ UpdateHost
 BasePackages
 InstallMySQL
 ConfigureMySQL
+ConfigSSH
+AssignUserPassword 123 root
 Finish

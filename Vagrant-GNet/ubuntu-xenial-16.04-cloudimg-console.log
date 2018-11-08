@@ -1,7 +1,7 @@
-[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup susys cuset
 [    0.000000] Initializing cgroup subsys cpu
 [    0.000000] Initializing cgroup subsys cpuacct
-[    0.000000] Linux version 4.4.0-137-generic (buildd@lgw01-amd64-037) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ) #163-Ubuntu SMP Mon Sep 24 13:14:43 UTC 2018 (Ubuntu 4.4.0-137.163-generic 4.4.144)
+[    0.000000] Linux version 4.4.0-137-generic (buildd@lgw01-amdd64-037) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ) #163-Ubuntu SMP Mon Sep 24 13:14:43 UTC 2018 (Ubuntu 4.4.0-137.163-generic 4.4.144)
 [    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.4.0-137-generic root=LABEL=cloudimg-rootfs ro console=tty1 console=ttyS0
 [    0.000000] KERNEL supported cpus:
 [    0.000000]   Intel GenuineIntel
@@ -41,19 +41,19 @@
 [    0.000000] ACPI: DSDT 0x00000000DFFF0480 0021FF (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
 [    0.000000] ACPI: FACS 0x00000000DFFF0200 000040
 [    0.000000] ACPI: FACS 0x00000000DFFF0200 000040
-[    0.000000] ACPI:APIC 0x00000000DFFF0240 00006C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+[    0.000000] ACPI: APIC 0x00000000DFFF0240 00006C (v02 VBOX   VBOXAPIC 00000001 ASL  0000061)
 [    0.000000] ACPI: SSDT 0x00000000DFFF02B0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
-[    0.000000] No NUMA configuration found
+[    0.000000] No NUMA configurattion found
 [    0.000000] Faking a node at [mem 0x0000000000000000-0x000000011fffffff]
 [    0.000000] NODE_DATA(0) allocated [mem 0x11fff7000-0x11fffbfff]
 [    0.000000] kvm-clock: Using msrs 4b564d01 and 4b564d00
 [    0.000000] kvm-clock: cpu 0, msr 1:1ffef001, primary cpu clock
-[    0.000000] kvm-clock: using sched offset of 5771008704 cycles
+[    0.000000] kvm-clock: using sched offset of 5552171105 cycles
 [    0.000000] clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
 [    0.000000] Zone ranges:
 [    0.000000]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
-[    0.000000]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
-[    0.000000]   Normal   [mem 0x0000000100000000-0x000000011fffffff]
+[    0.000000]   DMA2    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000011ffffffff]
 [    0.000000]   Device   empty
 [    0.000000] Movable zone start for each node
 [    0.000000] Early memory node ranges
@@ -78,17 +78,17 @@
 [    0.000000] PM: Registered nosave memory: [mem 0xfee00000-0xfee00fff]
 [    0.000000] PM: Registered nosave memory: [mem 0xfee01000-0xfffbffff]
 [    0.000000] PM: Registered nosave memory: [mem 0xfffc0000-0xffffffff]
-[    0.000000] e820: [mem 0xe0000000-0xfebfffff] availabl for PCI devices
+[    0.000000] e820: [mem 0xe0000000-0xfebfffff] available for PCI devices
 [    0.000000] Booting paravirtualized kernel on KVM
 [    0.000000] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645519600211568 ns
-[    0.000000] setup_percpu: NR__CPUS:512 nr_cpumask_bits:512 nr_cpu_ids:4 nr_node_ids:1
-[    0.000000] PERCPU: Embedde 34 pages/cpu @ffff88011fc00000 s99608 r8192 d31464 u524288
+[    0.000000] setup_percpu: NR_CPUS:512 nr_cpumask_bits:512 nr_cpu_ids:4 nr_node_ids:1
+[    0.000000] PERCPU: Embedded 34 pages/cpu @ffff88011fc00000 s99608 r8192 d31464 u524288
 [    0.000000] PV qspinlock hash table entries: 256 (order: 0, 4096 bytes)
 [    0.000000] Built 1 zonelists in Node order, mobility grouping on.  Total pages: 1032056
 [    0.000000] Policy zone: Normal
-[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-44.4.0-137-generic root=LABEL=cloudimg-rootfs ro console=tty1 console=ttyS0
+[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.4.0-137-generic root=LABEL=cloudimg-rootfs ro console=tty1 console=ttyS0
 [    0.000000] PID hash table entries: 4096 (order: 3, 32768 bytes)
-[    0.000000] Memory: 4027380K/4193848K available (8555K kernel code, 1314K rwdata, 4004K rodata, 1528K init, 1316K bss, 16648K reserved, 0K cma-reserved)
+[    0.000000] Memory: 4027380K/4193848K available (8555K kernel code, 1314K rwdata, 4004K rodata, 1528K init, 1316K bss, 166468K reserved, 0K cma-reserved)
 [    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
 [    0.000000] Kernel/User page tables isolation: enabled
 [    0.000000] Hierarchical RCU implementation.
@@ -99,684 +99,568 @@
 [    0.000000] Console: colour VGA+ 80x25
 [    0.000000] console [tty1] enabled
 [    0.000000] console [ttyS0] enabled
-[    0.000000] tsc: Detected 2292.566 MHz processor
-[    1.685461] Calibrating delay loop (skipped) preset value.. 4585.13 BogoMIPS (lpj=9170264)
-[    1.690469] pid_max: default: 32768 minimum: 301
-[    1.693630] ACPI: Core revision 20150930
-[    1.698756] ACPI: 2 ACPI AML tables successfully acquired and loaded
-[    1.702953] Security Framework initialized
-[    1.706134] Yama: becoming mindful.
-[    1.708446] AppArmor: AppArmor initialized
-[    1.729628] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
-[    1.787045] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
-[    1.791671] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
-[    1.795288] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
-[    1.823471] Initializing cgroup subsys io
-[    1.825901] Initializing cgroup subsys memory
-[    1.828384] Initializing cgroup subsys devices
-[    1.832998] Initializing cgroup subsys freezer
-[    1.835640] Initializing cgroup subsys net_cls
-[    1.838345] Initializing cgroup subsys perf_event
-[    1.841284] Initializing cgroup subsys net_prio
-[    1.844173] Initializing cgroup subsys hugetlb
-[    1.846630] Initializing cgroup subsys pids
-[    1.857684] mce: CPU supports 0 MCE banks
-[    1.860121] Last level iTLB entries: 4KB 512, 2MB 8, 4MB 8
-[    1.862936] Last level dTLB entries: 4KB 512, 2MB 32, 4MB 32, 1GB 0
-[    1.866761] Spectre V2 : Mitigation: Full generic retpoline
-[    1.875513] Spectre V2 : Spectre v2 mitigation: Speculation control IBPB not-supported IBRS not-supported
-[    1.882407] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
-[    1.895704] Speculative Store Bypass: Vulnerable
-[    1.923704] Freeing SMP alternatives memory: 32K
-[    1.950706] ftrace: allocating 32265 entries in 127 pages
-[    2.107438] smpboot: APIC(0) Converting physical 0 to logical package 0
-[    2.114164] smpboot: Max logical packages: 1
-[    2.117659] x2apic enabled
-[    2.150224] Switched APIC routing to physical x2apic.
-[    2.165090] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
-[    2.276021] smpboot: CPU0: Intel(R) Core(TM) i3-2350M CPU @ 2.30GHz (family: 0x6, model: 0x2a, stepping: 0x7)
-[    2.290888] Performance Events: unsupported p6 CPU model 42 no PMU driver, software events only.
-[    2.303184] KVM setup paravirtual spinlock
-[    2.308093] x86: Booting SMP configuration:
-[    2.319526] .... node  #0, CPUs:      #1
-[    2.323065] kvm-clock: cpu 1, msr 1:1ffef041, secondary cpu clock
-[    2.382282] mce: CPU supports 0 MCE banks
-[    2.386543]  #2
-[    2.387813] kvm-clock: cpu 2, msr 1:1ffef081, secondary cpu clock
-[    2.404277] mce: CPU supports 0 MCE banks
-[    2.442483]  #3
-[    2.444084] kvm-clock: cpu 3, msr 1:1ffef0c1, secondary cpu clock
-[    2.486758] mce: CPU supports 0 MCE banks
-[    2.490829] x86: Booted up 1 node, 4 CPUs
-[    2.515516] smpboot: Total of 4 processors activated (18340.52 BogoMIPS)
-[    2.520186] devtmpfs: initialized
-[    2.548800] evm: security.selinux
-[    2.551625] evm: security.SMACK64
-[    2.553810] evm: security.SMACK64EXEC
-[    2.555981] evm: security.SMACK64TRANSMUTE
-[    2.560469] evm: security.SMACK64MMAP
-[    2.570357] evm: security.ima
-[    2.573485] evm: security.capability
-[    2.590684] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
-[    2.597090] futex hash table entries: 1024 (order: 4, 65536 bytes)
-[    2.602982] pinctrl core: initialized pinctrl subsystem
-[    2.614760] RTC time: 22:43:36, date: 11/06/18
-[    2.618501] NET: Registered protocol family 16
-[    2.656034] cpuidle: using governor ladder
-[    2.681436] cpuidle: using governor menu
-[    2.704863] PCCT header not found.
-[    2.707135] ACPI: bus type PCI registered
-[    2.709747] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
-[    2.727757] PCI: Using configuration type 1 for base access
-[    2.785930] ACPI: Added _OSI(Module Device)
-[    2.807867] ACPI: Added _OSI(Processor Device)
-[    2.825660] ACPI: Added _OSI(3.0 _SCP Extensions)
-[    2.849897] ACPI: Added _OSI(Processor Aggregator Device)
-[    2.856936] ACPI: Executed 1 blocks of module-level executable AML code
-[    2.867258] ACPI: Interpreter enabled
-[    2.869993] ACPI: (supports S0 S5)
-[    2.872420] ACPI: Using IOAPIC for interrupt routing
-[    2.877324] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
-[    2.893151] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
-[    2.909719] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
-[    2.926996] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
-[    2.939841] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
-[    2.960963] PCI host bridge to bus 0000:00
-[    3.011196] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
-[    3.023324] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
-[    3.029787] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
-[    3.069761] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
-[    3.095676] pci_bus 0000:00: root bus resource [bus 00-ff]
-[    3.110851] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
-[    3.133726] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
-[    3.166212] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
-[    3.192016] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
-[    3.298910] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
-[    3.312450] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
-[    3.401368] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
-[    3.405618] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
-[    3.410333] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
-[    3.413373] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
-[    3.417572] ACPI: Enabled 2 GPEs in block 00 to 07
-[    3.443755] vgaarb: setting as boot device: PCI:0000:00:02.0
-[    3.461988] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
-[    3.488852] vgaarb: loaded
-[    3.497939] vgaarb: bridge control possible 0000:00:02.0
-[    3.508750] SCSI subsystem initialized
-[    3.514045] ACPI: bus type USB registered
-[    3.517175] usbcore: registered new interface driver usbfs
-[    3.521510] usbcore: registered new interface driver hub
-[    3.525379] usbcore: registered new device driver usb
-[    3.528760] PCI: Using ACPI for IRQ routing
-[    3.535846] NetLabel: Initializing
-[    3.539610] NetLabel:  domain hash size = 128
-[    3.542225] NetLabel:  protocols = UNLABELED CIPSOv4
-[    3.551440] NetLabel:  unlabeled traffic allowed by default
-[    3.555851] amd_nb: Cannot enumerate AMD northbridges
-[    3.559548] clocksource: Switched to clocksource kvm-clock
-[    3.645987] AppArmor: AppArmor Filesystem Enabled
-[    3.647680] pnp: PnP ACPI init
-[  3.650793] pnp: PnP ACPI: found 3 devices
-[    3.729945] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
-[   3.732866] NET: Registered protocl family 2
-[    3.803109] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
-[    3.893] TCP bind hash table entrie: 32768 (order: 7, 524288 bytes)
-[    3.954731] TCP: Hash tables configured (established 32768 bind 32768)
-[    3.957544] UDP hash table entries: 2048 (order: 4, 65536 bytes)
-[    3.960331] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
-[    3.9421] NET: Regitered protocol family 1
-[    4.079117] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
-[    4.080831] pci 0000:00:01.0: Activating ISA DMA hang workarounds
-[    4.082760] Unpacking initramfs...
+[    0.000000] tsc: Detected 2292.564 MHz processor
+[    0.737763] Calibrating delay loop (skipped) preset value.. 4585.12 BogoMIPS (lpj=9170256)
+[    0.743097] pid_max: default: 32768 minimum: 301
+[    0.746342] ACPI: Core revision 20150930
+[    0.750955] ACPI: 2 ACPI AML tables successfully acquired and loaded
+[    0.754496] Security Framework initialized
+[    0.756116] Yama: becoming mindful.
+[    0.757538] AppArmor: AppArmor initialized
+[    0.761926] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes)
+[    0.771083] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes)
+[    0.774519] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.776888] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.781745] Initializing cgroup subsys io
+[    0.783616] Initializing cgroup subsys memory
+[    0.786058] Initializing cgroup subsys devices
+[    0.788471] Initializing cgroup subsys freezer
+[    0.790921] Initializing cgroup subsys net_cls
+[    0.793007] Initializing cgroup subsys perf_event
+[    0.795491] Initializing cgroup subsys net_prio
+[    0.797695] Initializing cgroup subsys hugetlb
+[    0.799745] Initializing cgroup subsys pids
+[    0.801775] mce: CPU supports 0 MCE banks
+[    0.803602] Last level iTLB entries: 4KB 512, 2MB 8, 4MB 8
+[    0.806289] Last level dTLB entries: 4KB 512, 2MB 32, 4MB 32, 1GB 0
+[    0.809244] Spectre V2 : Mitigation: Full generic retpoline
+[    0.812021] Spectre V2 : Spectre v2 mitigation: Speculation control IBPB not-supported IBRS not-supported
+[    0.816068] Spectre V2 : Spectre v2 / SpectreRSB mitigation: Filling RSB on context switch
+[    0.821982] Speculative Store Bypass: Vulnerable
+[    0.832962] Freeing SMP alternatives memory: 32K
+[    0.853857] ftrace: allocating 32265 entries in 127 pages
+[    0.978884] smpboot: APIC(0) Converting physical 0 to logical package 0
+[    0.982327] smpboot: Max logical packages: 1
+[    0.985586] x2apic enabled
+[    0.988144] Switched APIC routing to physical x2apic.
+[    0.993629] ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+[    1.103778] smpboot: CPU0: Intel(R) Core(TM) i3-2350M CPU @ 2.30GHz (family: 0x6, model: 0x2a, stepping: 0x7)
+[    1.108578] Performance Events: unsupported p6 CPU model 42 no PMU driver, software events only.
+[    1.112554] KVM setup paravirtual spinlock
+[    1.115549] x86: Booting SMP configuration:
+[    1.117961] .... node  #0, CPUs:      #1
+[    1.120284] kvm-clock: cpu 1, msr 1:1ffef041, secondary cpu clock
+[    1.122295] mce: CPU supports 0 MCE banks
+[    1.147153]  #2
+[    1.148502] kvm-clock: cpu 2, msr 1:1ffef081, secondary cpu clock
+[    1.150821] mce: CPU supports 0 MCE banks
+[    1.156499]  #3
+[    1.157787] kvm-clock: cpu 3, msr 1:1ffef0c1, secondary cpu clock
+[    1.184189] mce: CPU supports 0 MCE banks
+[    1.193967] x86: Booted up 1 node, 4 CPUs
+[    1.195917] smpboot: Total of 4 processors activated (18340.51 BogoMIPS)
+[    1.198901] devtmpfs: initialized
+[    1.205708] evm: security.selinux
+[    1.207183] evm: security.SMACK64
+[    1.208615] evm: security.SMACK64EXEC
+[    1.209970] evm: security.SMACK64TRANSMUTE
+[    1.211499] evm: security.SMACK64MMAP
+[    1.212948] evm: security.ima
+[    1.214160] evm: security.capability
+[    1.215871] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    1.219293] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    1.221614] pinctrl core: initialized pinctrl subsystem
+[    1.223803] RTC time: 17:33:23, date: 11/08/18
+[    1.225943] NET: Registered protocol family 16
+[    1.239567] cpuidle: using governor ladder
+[    1.255740] cpuidle: using governor menu
+[    1.257177] PCCT header not found.
+[    1.258422] ACPI: bus type PCI registered
+[    1.259880] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    1.262123] PCI: Using configuration type 1 for base access
+[    1.279305] ACPI: Added _OSI(Module Device)
+[    1.284131] ACPI: Added _OSI(Processor Device)
+[    1.285592] ACPI: Added _OSI(3.0 _SCP Extensions)
+[    1.288137] ACPI: Added _OSI(Processor Aggregator Device)
+[    1.290836] ACPI: Executed 1 blocks of module-level executable AML code
+[    1.297531] ACPI: Interpreter enabled
+[    1.310045] ACPI: (supports S0 S5)
+[    1.315753] ACPI: Using IOAPIC for interrupt routing
+[    1.325378] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    1.341709] ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+[    1.343729] acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+[    1.353834] acpi PNP0A03:00: _OSC: not requesting OS control; OS requires [ExtendedConfig ASPM ClockPM MSI]
+[    1.363036] acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+[    1.368928] PCI host bridge to bus 0000:00
+[    1.399116] pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+[    1.402808] pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+[    1.406698] pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+[    1.411068] pci_bus 0000:00: root bus resource [mem 0xe0000000-0xfdffffff window]
+[    1.415240] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    1.426555] pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+[    1.430072] pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+[    1.433306] pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+[    1.438432] pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+[    1.505546] pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+[    1.507812] pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+[    1.564420] ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+[    1.567006] ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 *10 11)
+[    1.569504] ACPI: PCI Interrupt Link [LNKC] (IRQs 5 *9 10 11)
+[    1.573350] ACPI: PCI Interrupt Link [LNKD] (IRQs 5 9 10 *11)
+[    1.575759] ACPI: Enabled 2 GPEs in block 00 to 07
+[    1.577806] vgaarb: setting as boot device: PCI:0000:00:02.0
+[    1.579526] vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+[    1.581914] vgaarb: loaded
+[    1.582879] vgaarb: bridge control possible 0000:00:02.0
+[    1.584725] SCSI subsystem initialized
+[    1.586216] ACPI: bus type USB registered
+[    1.587481] usbcore: registered new interface driver usbfs
+[    1.589061] usbcore: registered new interface driver hub
+[    1.590585] usbcore: registered new device driver usb
+[    1.592419] PCI: Using ACPI for IRQ routing
+[    1.594230] NetLabel: Initializing
+[    1.601549] NetLabel:  domain hash size = 128
+[    1.603021] NetLabel:  protocols = UNLABELED CIPSOv4
+[    1.604677] NetLabel:  unlabeled traffic allowed by default
+[    1.606450] amd_nb: Cannot enumerate AMD northbridges
+[    1.608695] clocksource: Switched to clocksource kvm-clock
+[    1.625408] AppArmor: AppArmor Filesystem Enabled
+[    1.629053] pnp: PnP ACPI init
+[    1.631777] pnp: PnP ACPI: found 3 devices
+[    1.646402] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    1.649387] NET: Registered protocol family 2
+[    1.6125]CPestablished hash table entries: 32768 (order: 6, 262144 bytes)
+[    1.806295] TCP bind hsh table entries: 32768 (order: 7, 524288 bytes)
+[    1.846237] TCP: Hash tables configured (established 32768 bind 32768)
+[    1.849179] UDP hash table entries: 2048 (order: 4, 65536 bytes)
+[    1.851899] UDP-Lite hash table entries: 2048 (order: 4, 65536 bytes)
+[    1.855732] NET: Registered protocol family 1
+[    1.858098] pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+[    1.860804] pci 0000:00:01.0: Activating ISA DMA hang workarounds
+[    1.863115] Unpacking initramfs...
 
-[    4.777151] Freeing initrd memory: 15364K
-[    4.779462] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
-[    4.782662] software IO TLB [mem 0xdbff0000-0xdff0000] (64MB) mapped at [ffff8800dbff0000-ffff8800dffeffff]
-[    4.827749] RAPL PMU detected, API unit is 2^-32 Joules, 3 fixed counters 10737418240 ms ovfl timer
-[    4.831302] hw unit of domain pp0-core 2^-0 Joules
-[    4.833134] hw unit of domain package 2^-0 Joules
-[    4.834977] hw unit of domain pp1-gpu 2^-0 Joules
-[    4.837217] platform rtc_cmos: registed platform RTC device (no PNP device found)
-[    4.926538] Scanning for low memory corruption every 60 seconds
-[    4.9297] audit: initializing netlink subsys (disabled)
-[    4.996118] audit: type=2000 audit(1541544225.857:1): initialized
-[    4.998123] Initialise system trusted keyring
-
-[    4.999975] HugeTLB registered 2 MB page size, pre-allocated 0 pages
-[    5.004762] zbud:oaded
-[    5.074269] VFS: Disk quotas dquot_6.6.0
-[    5.076574] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
-[    5.080602] squashfs: version 4.0 (2009/01/31) Phillip Lougher
-[    5.085064] fuse init (API version 7.23)
-[    5.088432] Key type big_key registered
-[    5.090549] Allocating IMA MOK and blacklist keyrings.
-
-[    5.096687] Key type asymmetric registered
-[    5.098703] Asymmetric key parser 'x509' registered
-[    5.102491] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
-[    5.107837] io scheduler noop registered
-[    5.110205] io scheduler deadline registered (default)
-[    5.119824] io scheduler cfq registered
-[    5.133217] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
-[    5.149513] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
-[    5.158711] ACPI: AC Adapter [AC] (on-line)
-[    5.162902] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
-[    5.179021] ACPI: Power Button [PWRF]
-[    5.182517] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
-[    5.196706] ACPI: Sleep Button [SLPF]
-[    5.198781] GHES: HEST is not enabled!
-[    5.200838] ACPI: Battery Slot [BAT0] (battery present)
-[    5.203831] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
-[    5.231122] 00:02: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
-[    5.236702] Linux agpgart interface v0.103
-[    5.243331] loop: module loaded
-[    5.246141] scsi host0: ata_piix
-[    5.248246] scsi host1: ata_piix
-[    5.249866] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
-[    5.252869] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
-[    5.256095] libphy: Fixed MDIO Bus: probed
-[    5.257981] tun: Universal TUN/TAP device driver, 1.6
-[    5.260015] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
-[    5.262567] PPP generic driver version 2.4.2
-[    5.264784] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
-[    5.267070] ehci-pci: EHCI PCI platform driver
-[    5.268698] ehci-platform: EHCI generic platform driver
-[    271364] ohci_hcd: USB 1 'Open' Host Controler (OHCI) Driver
-[    5.497984] ohci-pci: OHCI PCI platform driver
-[    5.500395] ohci-platform: OHCI generic platform driver
-[    5.503464] uhci_hc USB Universal Host Controller Interface driver
-[    5.58324] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
-[    5.631800] serio: i8042 KBD port at 0x60,0x64 irq 1
-[    5.633518] serio: i8042 AUX port at 0x60,0x64 irq 12
-[    5.635844] mousedev:S/2 mouse device common for all mice
-[    5.716787] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
-[    5.722385] rtc_cmos rtc_cmos: rtc core: regiered rtc_cmos a rtc0
-[    5.831500] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
-[    5.833557] i2c /dv entries driver
-[    5.836943] tsc: Refined TSC clocksource calibration: 2294.277 MHz
-[    5.836947] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x211216e6e39, max_idle_s: 440795210668 ns
-[    5.909082] device-mapper: uevent: version 1.0.3
-[    5.910893] device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-dev@rdh.com
-[    6.089672] ledrig-cpu: registered to indicate activity on CPUs
-
-[    6.124525] NET: Registered protocol family 10
-[    6.126433] NET: Registered protocol family 17
-[    6.128159] Key type dns_resolver registered
-[    6.130117] registered taskstats version 1
-[    6.131745] Loading compiled-in X.509 certificates
-[    6.143048] Loaded X.509 cert 'Build time autogenerated kernel key: 20acc96b50ca7641011eace69d32209215a9b56f'
-[    6.171114] zswap: loaded using pool lzo/zbud
-[    6.179876] Key type trusted registered
-[    6.189540] Key type encrypted registered
-[    6.191438] AppArmor: AppArmor sha1 policy hashing enabled
-[    6.197885] ima: No TPM chip found, activating TPM-bypass!
-[    6.200199] ima: Allocated hash algorithm: sha1
-[    6.214121] evm: HMAC attrs: 0x1
-[    6.217594]   Magic number: 10:500:754
-[    6.225597] tty ttyS5: hash matches
-[    6.227440] rtc_cmos rtc_cmos: setting system clock to 2018-11-06 22:43:40 UTC (1541544220)
-[    6.231618] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
-[    6.246485] EDD information not available.
-[    6.251429] Freeing unused kernel memory: 1528K
-[    6.265952] Write protecting the kernel read-only data: 14336k
-[    6.905022] Freeing unused kernel memory: 1672K
-[    6.909254] Freeing unused kernel memory: 92K
+[    2.269209] Freeing initrd memory: 15364K
+[    2.271659] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    2.274978] software IO TLB [mem 0xdbff0000-0xdfff0000] (64MB) mapped at [ffff8800dbff0000-ffff8800dffeffff]
+[    2.279914] RAPL PMU detected, API unit is 2^-32 Joules, 3 fixed counters 10737418240 ms ovfl timer
+[    2.284574] hw unit of domain pp0-core 2^-0 Joules
+[    2.287196] hw unit of domain package 2^-0 Joules
+[    2.289653] hw unit of domain pp1-gpu 2^-0 Joules
+[    2.292107] platform rtc_cmos: registered platform RTC device (no PNP device found)
+[    2.296195] Scanning for low memory corruption every 60 seconds
+[    2.300092] audit: initializing netlink subsys (disabled)
+[    2.302838] audit: type=2000 audit(1541698411.418:1): initialized
+[    2.307022] Initialise system trusted keyring
+[    2.309252] HugeTLB registered 2 MB page size, pre-allocated 0 pages
+[    2.314780] zbud: loaded
+[    2.317690] VFS: Disk quotas dquot_6.6.0
+[    2.322354] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    2.325462] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.329392] fuse init (API version 7.23)
+[    2.331996] Key type big_key registered
+[    2.334488] Allocating IMA MOK and blacklist keyrings.
+[    2.339445] Key type asymmetric registered
+[    2.340915] Asymmetric key parser 'x509' registered
+[    2.344623] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+[    2.351413] io scheduler noop registered
+[    2.352924] io scheduler deadline registered (default)
+[    2.354772] io scheduler cfq registered
+[    2.357031] pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+[    2.359876] pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+[    2.368039] ACPI: AC Adapter [AC] (on-line)
+[    2.369502] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+[    2.372487] ACPI: Power Button [PWRF]
+[    2.377987] input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+[    2.380357] ACPI: Sleep Button [SLPF]
+[    2.383120] ACPI: Battery Slot [BAT0] (battery present)
+[    2.384713] GHES: HEST is not enabled!
+[    2.386140] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    2.412122] 00:02: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A
+[    2.416263] Linux agpgart interface v0.103
+[    2.422437] loop: module loaded
+[    2.431417] scsi host0: ata_piix
+[    2.432806] scsi host1: ata_piix
+[    2.438407] ata1: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+[    2.440289] ata2: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+[    2.443050] libphy: Fixed MDIO Bus: probed
+[    2.444268] tun: Universal TUN/TAP device driver, 1.6
+[    2.445748] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    2.449433] PPP generic driver version 2.4.2
+[    2.450793] ehcihc: SB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[     2.546748] ehci-pci: EHCI PCI platform driver
+[    2.548754] ehci-platform: EHCI generic platform driver
+[    2.550554] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.552566] ohci-pci: OHCI PCI platform driver
+[    2.559881] ohci-platform: OHCI generic platform driver
+[    2.567019] uhci_hcd: USB Universal Host Controller Interface driver
+[    2.569301] i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+[    2.573001] serio: i8042 KBD port at 0x60,0x64 irq 1
+[    2.574639] serio: i8042 AUX port at 0x60,0x64 irq 12
+[    2.576547] mousedev: PS/2 mouse device common for all mice
+[    2.579234] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+[    2.582343] rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+[    2.590840] rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+[    2.592943] i2c /dev entries driver
+[    2.612788] device-mapper: uevent: version 1.0.3
+[    2.621673] device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-devel@redhat.com
+[    2.624700] ledtrig-cpu: registered to indicate activity on CPUs
+[    2.627864] NET: Registered protocol family 10
+[    2.633727] NET: Registered protocol family 17
+[    2.649344] Key type dns_resolver registered
+[    2.664537] registered taskstats version 1
+[    2.673860] Loading compiled-in X.509 certificates
+[    2.698973] Loaded X.509 cert 'Build time autogenerated kernel key: 20acc96b50ca7641011eace69d32209215a9b56f'
+[    2.755615] zswap: loaded using pool lzo/zbud
+[    2.761513] Key type trusted registered
+[    2.790098] Key type encrypted registered
+[    2.795544] AppArmor: AppArmor sha1 policy hashing enabled
+[    2.819249] ima: No TPM chip found, activating TPM-bypass!
+[    2.821503] ima: Allocated hash algorithm: sha1
+[    2.841381] evm: HMAC attrs: 0x1
+[    2.859473]   Magic number: 10:464:592
+[    2.862456] rtc_cmos rtc_cmos: setting system clock to 2018-11-08 17:33:25 UTC (1541698405)
+[    2.910497] BIOS EDD facility v0.16 2004-Jun-25, 0 devices found
+[    2.950326] EDD information not available.
+[    2.998956] Freeing unused kernel memory: 1528K
+[    3.017245] Write protecting the kernel read-only data: 14336k
+[    3.288883] tsc: Refined TSC clocksource calibration: 2293.307 MHz
+[    3.288887] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x210e826182b, max_idle_ns: 440795252138 ns
+[    3.843930] Freeing unused kernel memory: 1672K
+[    4.291551] Freeing unused kernel memory: 92K
 Loading, please wait...
-starting version[    6.934919] random: systemd-udevd: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
- 229
-[    6.936155] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
-[    6.936201] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
-[    6.990502] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
-[    6.990621] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
-[    6.991808] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
-[    6.991960] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
-[    6.992109] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
-[    6.992322] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
-[    6.992465] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
-[    7.161539] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
-[    7.166539] e1000: Copyright (c) 1999-2006 Intel Corporation.
-[    7.170850] Fusion MPT base driver 3.04.20
-[    7.202360] Copyright (c) 1999-2008 LSI Corporation
-[    7.245498] Fusion MPT SPI Host driver 3.04.20
-[    7.481932] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
-[    7.706752] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 02:20:67:8c:d5:af
-[    7.718117] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
-[    8.173470] e1000 0000:00:08.0 eth1: (PCI:33MHz:32-bit) 08:00:27:a7:7b:37
-[    8.175890] e1000 0000:00:08.0 eth1: Intel(R) PRO/1000 Network Connection
-[    8.606402] e1000 0000:00:09.0 eth2: (PCI:33MHz:32-bit) 08:00:27:8f:b7:1e
-[    8.612980] e1000 0000:00:09.0 eth2: Intel(R) PRO/1000 Network Connection
-[    8.635180] e1000 0000:00:03.0 enp0s3: renamed from eth0
-[    8.662716] mptbase: ioc0: Initiating bringup
-[    8.678142] e1000 0000:00:08.0 enp0s8: renamed from eth1
-[    8.707876] e1000 0000:00:09.0 enp0s9: renamed from eth2
-[    8.749083] ioc0: LSI53C1030 A0: Capabilities={Initiator}
-[    9.421171] scsi host2: ioc0: LSI53C1030 A0, FwRev=00000000h, Ports=1, MaxQ=256, IRQ=20
-[   10.223613] scsi 2:0:0:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
-[   10.226668] scsi target2:0:0: Beginning Domain Validation
-[   10.276994] scsi target2:0:0: Domain Validation skipping write tests
-[   10.278842] scsi target2:0:0: Ending Domain Validation
-[   10.280715] scsi target2:0:0: asynchronous
-[   10.283259] scsi 2:0:1:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
-[   10.285938] scsi target2:0:1: Beginning Domain Validation
-[   10.291024] scsi target2:0:1: Domain Validation skipping write tests
-[   10.292953] scsi target2:0:1: Ending Domain Validation
-[   10.294801] scsi target2:0:1: asynchronous
-[   10.306479] sd 2:0:0:0: Attached scsi generic sg0 type 0
-[   10.310200] sd 2:0:0:0: [sda] 20971520 512-byte logical blocks: (10.7 GB/10.0 GiB)
-[   10.361923] sd 2:0:1:0: Attached scsi generic sg1 type 0
-[   10.362169] sd 2:0:1:0: [sdb] 20480 512-byte logical blocks: (10.5 MB/10.0 MiB)
-[   10.362802] sd 2:0:1:0: [sdb] Write Protect is off
-[   10.363027] sd 2:0:1:0: [sdb] Incomplete mode parameter data
-[   10.363030] sd 2:0:1:0: [sdb] Assuming drive cache: write through
-[   10.368447] sd 2:0:0:0: [sda] Write Protect is off
-[   10.368619] sd 2:0:0:0: [sda] Incomplete mode parameter data
-[   10.368622] sd 2:0:0:0: [sda] Assuming drive cache: write through
-[   10.386796]  sda: sda1
-[   10.388856] sd 2:0:0:0: [sda] Attached SCSI disk
-[   10.389219] sd 2:0:1:0: [sdb] Attached SCSI disk
-Begin: Loading essential drivers ... [   12.357652] md: linear personality registered for level -1
-[   12.366817] md: multipath personality registered for level -4
-[   12.380935] md: raid0 personality registered for level 0
-[   12.388512] md: raid1 personality registered for level 1
-[   12.464270] raid6: sse2x1   gen()  4697 MB/s
-[   12.531727] raid6: sse2x1   xor()  3562 MB/s
-[   12.604066] raid6: sse2x2   gen()  5447 MB/s
-[   12.696029] raid6: sse2x2   xor()  3679 MB/s
-[   12.763678] raid6: sse2x4   gen()  5000 MB/s
-[   12.837075] raid6: sse2x4   xor()  3357 MB/s
-[   12.840679] raid6: using algorithm sse2x2 gen() 5447 MB/s
-[   12.843747] raid6: .... xor() 3679 MB/s, rmw enabled
-[   12.846548] raid6: using ssse3x2 recovery algorithm
-[   12.860054] xor: automatically using best checksumming function:
-[   12.911662]    avx       :  7533.000 MB/sec
-[   12.919889] async_tx: api initialized (async)
-[   12.953668] md: raid6 personality registered for level 6
-[   12.962941] md: raid5 personality registered for level 5
-[   12.971725] md: raid4 personality registered for level 4
-[   13.000496] md: raid10 personality registered for level 10
+starting version 229
+[    4.327874] random: systemd-udevd: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
+[    4.329197] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
+[    4.329236] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
+[    4.352150] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
+[    4.352236] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
+[    4.352861] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
+[    4.353037] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
+[    4.353204] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
+[    4.353323] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
+[    4.353442] random: udevadm: uninitialized urandom read (16 bytes read, 4 bits of entropy available)
+[    4.501943] Fusion MPT base driver 3.04.20
+[    4.512118] Copyright (c) 1999-2008 LSI Corporation
+[    4.535954] e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+[    4.557510] e1000: Copyright (c) 1999-2006 Intel Corporation.
+[    4.627105] Fusion MPT SPI Host driver 3.04.20
+[    4.828495] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input4
+[    5.054209] e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 02:20:67:8c:d5:af
+[    5.106186] e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+[    5.543899] e1000 0000:00:08.0 eth1: (PCI:33MHz:32-bit) 08:00:27:a7:7b:37
+[    5.547786] e1000 0000:00:08.0 eth1: Intel(R) PRO/1000 Network Connection
+[    5.959476] e1000 0000:00:09.0 eth2: (PCI:33MHz:32-bit) 08:00:27:8f:b7:1e
+[    6.003716] e1000 0000:00:09.0 eth2: Intel(R) PRO/1000 Network Connection
+[    6.034650] e1000 0000:00:03.0 enp0s3: renamed from eth0
+[    6.044961] mptbase: ioc0: Initiating bringup
+[    6.077808] e1000 0000:00:09.0 enp0s9: renamed from eth2
+[    6.104916] e1000 0000:00:08.0 enp0s8: renamed from eth1
+[    6.121715] ioc0: LSI53C1030 A0: Capabilities={Initiator}
+[    6.707808] scsi host2: ioc0: LSI53C1030 A0, FwRev=00000000h, Ports=1, MaxQ=256, IRQ=20
+[    7.052664] scsi 2:0:0:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
+[    7.441306] scsi target2:0:0: Beginning Domain Validation
+[    7.444399] scsi target2:0:0: Domain Validation skipping write tests
+[    7.446535] scsi target2:0:0: Ending Domain Validation
+[    7.448939] scsi target2:0:0: asynchronous
+[    7.451922] scsi 2:0:1:0: Direct-Access     VBOX     HARDDISK         1.0  PQ: 0 ANSI: 5
+[    7.458579] scsi target2:0:1: Beginning Domain Validation
+[    7.462118] scsi target2:0:1: Domain Validation skipping write tests
+[    7.464559] scsi target2:0:1: Ending Domain Validation
+[    7.466689] scsi target2:0:1: asynchronous
+[    7.479062] sd 2:0:0:0: Attached scsi generic sg0 type 0
+[    7.486677] sd 2:0:0:0: [sda] 20971520 512-byte logical blocks: (10.7 GB/10.0 GiB)
+[    7.487737] sd 2:0:1:0: [sdb] 20480 512-byte logical blocks: (10.5 MB/10.0 MiB)
+[    7.488063] sd 2:0:1:0: Attached scsi generic sg1 type 0
+[    7.488120] sd 2:0:1:0: [sdb] Write Protect is off
+[    7.488459] sd 2:0:1:0: [sdb] Incomplete mode parameter data
+[    7.488462] sd 2:0:1:0: [sdb] Assuming drive cache: write through
+[    7.517381] sd 2:0:0:0: [sda] Write Protect is off
+[    7.521391] sd 2:0:0:0: [sda] Incomplete mode parameter data
+[    7.525519] sd 2:0:0:0: [sda] Assuming drive cache: write through
+[    8.001045]  sda: sda1
+[    8.002702] sd 2:0:1:0: [sdb] Attached SCSI disk
+[    8.020276] sd 2:0:0:0: [sda] Attached SCSI disk
+Begin: Loading e[   11.038827] md: linear personality registered for level -1
+ssential drivers ... [   11.059116] md: multipath personality registered for level -4
+[   11.075501] md: raid0 personality registered for level 0
+[   11.092715] md: raid1 personality registered for level 1
+[   11.181036] raid6: sse2x1   gen()  3168 MB/s
+[   11.248826] raid6: sse2x1   xor()  2712 MB/s
+[   11.317255] raid6: sse2x2   gen()  5248 MB/s
+[   11.388880] raid6: sse2x2   xor()  3823 MB/s
+[   11.456772] raid6: sse2x4   gen()  6008 MB/s
+[   11.525086] raid6: sse2x4   xor()  4901 MB/s
+[   11.536897] raid6: using algorithm sse2x4 gen() 6008 MB/s
+[   11.538664] raid6: .... xor() 4901 MB/s, rmw enabled
+[   11.540516] raid6: using ssse3x2 recovery algorithm
+[   11.544764] xor: automatically using best checksumming function:
+[   11.585169]    avx       : 12386.000 MB/sec
+[   11.588907] async_tx: api initialized (async)
+[   11.603183] md: raid6 personality registered for level 6
+[   11.605184] md: raid5 personality registered for level 5
+[   11.607459] md: raid4 personality registered for level 4
+[   11.627156] md: raid10 personality registered for level 10
 done.
 Begin: Running /scripts/init-premount ... done.
-Begin: Mounting root file system ... Begin: Run[   13.085731] Btrfs loaded
-ning /scripts/local-top ... done.
-Begin: Running /scripts/local-premount ... Scanning for Btrfs filesystems
+Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
+Begin: Running /scripts/local-premount ... [   11.693435] Btrfs loaded
+Scanning for Btrfs filesystems
 done.
 Warning: fsck not present, so skipping root file system
-[   13.295748] EXT4-fs (sda1): INFO: recovery required on readonly filesystem
-[   13.299798] EXT4-fs (sda1): write access will be enabled during recovery
-[   13.865067] EXT4-fs (sda1): orphan cleanup on readonly fs
-[   13.868737] EXT4-fs (sda1): 1 orphan inode deleted
-[   14.221563] EXT4-fs (sda1): recovery complete
-[   14.374904] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+[   11.960548] EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
 done.
 Begin: Running /scripts/local-bottom ... done.
-Begin: Running /scripts/init-bottom ... [   15.000902] random: nonblocking pool is initialized
-done.
-[   19.312483] systemd[1]: systemd 229 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ -LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN)
-[   19.329314] systemd[1]: Detected virtualization oracle.
-[   19.339542] systemd[1]: Detected architecture x86-64.
+Begin: Running /scripts/init-bottom ... done.
+[   12.714067] random: nonblocking pool is initialized
+[   13.973822] systemd[1]: systemd 229 running in system de (PAM +AUDIT +SELINUX +IMA +APPARMOR +MAK +SYSVINIT +UTMP +LIBCRPTSETUP +GCRYPT +GNUTLS +ACL +XZ -LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN)
+[   14.247044] systemd[1]: Detected virtualization oracle.
+[   14.249628] systemd[1]: Detected architecture x86-64.
 
 Welcome to [1mUbuntu 16.04.5 LTS[0m!
 
-[   19.504483] systemd[1]: Set hostname to <gnet-web>.
-[   22.314411] systemd[1]: Reached target User and Group Name Lookups.
-[[0;32m  OK  [0m] Reached target User and Group Name Lookups.
-[   22.319633] systemd[1]: Listening on Journal Socket.
-[[0;32m  OK  [0m] Listening on Journal Socket.
-[   22.347608] systemd[1]: Listening on LVM2 poll daemon socket.
-[[0;32m  OK  [0m] Listening on LVM2 poll daemon socket.
-[   22.367538] systemd[1]: Listening on udev Kernel Socket.
-[[0;32m  OK  [0m] Listening on udev Kernel Socket.
-[   22.403139] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
-[[0;32m  OK  [0m] Set up automount Arbitrary Executab...ats File System Automount Point.
-[   22.480607] systemd[1]: Reached target Encrypted Volumes.
+[   14.411376] systemd[1]: Set hostname to ne-web>.
+
+[  16.59523] systemd[1]: Reached target Encrypted Volumes.
 [[0;32m  OK  [0m] Reached target Encrypted Volumes.
-[   22.487874] systemd[1]: Listening on udev Control Socket.
-[[0;32m  OK  [0m] Listening on udev Control Socket.
-[   22.492304] systemd[1]: Reached target System Time Synchronized.
-[[0;32m  OK  [0m] Reached target System Time Synchronized.
-[   22.505185] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
-[[0;32m  OK  [0m] Started Forward Password Requests to Wall Directory Watch.
-[   22.556011] systemd[1]: Reached target Swap.
-[[0;32m  OK  [0m] Reached target Swap.
-[   22.580766] systemd[1]: Listening on Journal Audit Socket.
-[[0;32m  OK  [0m] Listening on Journal Audit Socket.
-[   22.600868] systemd[1]: Listening on Syslog Socket.
-[[0;32m  OK  [0m] Listening on Syslog Socket.
-[   22.635532] systemd[1]: Started Trigger resolvconf update for networkd DNS.
+[   16.794846] systemd[1]: Started Trigger resolvconf update for networkd DNS.
 [[0;32m  OK  [0m] Started Trigger resolvconf update for networkd DNS.
-[   22.677171] systemd[1]: Listening on Device-mapper event daemon FIFOs.
-[[0;32m  OK  [0m] Listening on Device-mapper event daemon FIFOs.
-[   22.685772] systemd[1]: Listening on /dev/initctl Compatibility Named Pipe.
-[[0;32m  OK  [0m] Listening on /dev/initctl Compatibility Named Pipe.
-[   22.726306] systemd[1]: Listening on LVM2 metadata daemon socket.
-[[0;32m  OK  [0m] Listening on LVM2 metadata daemon socket.
-[   22.731059] systemd[1]: Listening on Journal Socket (/dev/log).
-[[0;32m  OK  [0m] Listening on Journal Socket (/dev/log).
-[   22.735988] systemd[1]: Created slice System Slice.
-[[0;32m  OK  [0m] Created slice System Slice.
-[   22.745558] systemd[1]: Created slice system-serial\x2dgetty.slice.
-[[0;32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
-[   22.798317] systemd[1]: Starting Load Kernel Modules...
-         Starting Load Kernel Modules...
-[   22.815365] systemd[1]: Starting Uncomplicated firewall...
-         Starting Uncomplicated firewall...
-[   22.884141] systemd[1]: Mounting POSIX Message Queue File System...
-         Mounting POSIX Message Queue File System...
-[   22.952210] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
-         Starting Monitoring of LVM2 mirrors... dmeventd or progress polling...
-[   23.004591] systemd[1]: Starting Set console keymap...
-         Starting Set console keymap...
-[   23.018971] systemd[1]: Mounting Debug File System...
-         Mounting Debug File System...
-[   23.058954] systemd[1]: Mounting Huge Pages File System...
-[   23.068869] Loading iSCSI transport class v2.0-870.
-         Mounting Huge Pages File System...
-[   23.086067] systemd[1]: Starting Nameserver information manager...
-         Starting Nameserver information manager...
-[   23.099369] systemd[1]: Starting Journal Service...
-         Starting Journal Service...
-[   23.109804] systemd[1]: Created slice User and Session Slice.
+[   16.84425 ste[1: Litein on udev Kernel Socket.
+[[0;32m  OK  [0m] Listening on udev Kernel Socket.
+[   17.213230] systemd[1]: Listening on LVM2 poll daemon socket.
+[[0;32m  OK  [0m] Listening on LVM2 poll daemon socket.
+[   17.274298] system[1]: Create sice User and Session Slice.
 [[0;32m  OK  [0m] Created slice User and Session Slice.
-[   23.113684] systemd[1]: Reached target Slices.
+[  17.381747] systemd[1]: Reached target Swap.
+[[0;32m  OK  [0m] Reached target Swap.
+[   17.44065 systemd[1]: Listening on Journal Socket (/dev/log).
+[[0;32m  OK  [0m] Listening on Journal Socket (/dev/log).
+[   17.508593] systemd[1]: Listening on udev Control Socket.
+[[0;32m  OK  [0m] Listening on udev Control Socket.
+[   17.512886] systemd[1]: Listening on Journal Socket.
+[[0;32m  OK  [0m] Listening on Journal Socket.
+[   17.516903] syted[]: Listening on /dev/initctl Compatibility Named Pipe.
+[[0;32m  OK  [0m] Listening on /dev/initctl Compatibility Named Pipe.
+[   17.793465] systemd[1]: Reached target System Time Synchronized.
+[[0;32m  OK  [0m] Reached target System Time Synchronized.
+[   17.817748] systemd[1]: Listening on Journal Audit Socket.
+[[0;32m  OK  [0m] Listening on Journal Audit Socket.
+[ 181603sytemd[1]: Create sceSystem Slice.
+[[0;32m  OK  [0m] Created slice System Slice.
+[   18.769494] systemd[1]: Created slice system-serial\x2dtt.sic
+[[0;32m  OK  [0m] Created slice system-serial\x2dgetty.slice.
+[  1.000 stemd[1]: Reached taet Slices.
 [[0;32m  OK  [0m] Reached target Slices.
-[   23.118123] systemd[1]: Starting Create list of required static device nodes for the current kernel...
-         Starting Create list of required st... nodes for the current kernel...
-[   23.131623] systemd[1]: Starting Remount Root and Kernel File Systems...
+[   19.481687] systemd[1]: Starting Remount Root and Kernel File Systems...
          Starting Remount Root and Kernel File Systems...
-[   23.148126] systemd[1]: Started Uncomplicated firewall.
-[[0;32m  OK  [0m] Started Uncomplicated firewa[   23.157091] iscsi: registered transport (tcp)
-ll.
-[   23.219511] systemd[1]: Started Create list of required static device nodes for the current kernel.
-[[0;32m  OK  [0m] Started Create list of required sta...ce nodes for the current kernel.
-[   23.252462] systemd[1]: Starting Create Static Device Nodes in /dev...
-         Starting Create Static Device Nodes in /dev...
-[   23.374473] EXT4-fs (sda1): re-mounted. Opts: (null)
-[   23.374924] systemd[1]: Mounted Debug File System.
-[[0;32m  OK  [0m] Mounted Debug File System.
-[   23.403037] systemd[1]: Mounted Huge Pages File System.
+[   19.508680] systemd[1]: Starting Uncomplicated firewall...
+         Starting Uncomplicated firewall...
+[   19.561483] systemd[1]: Starting Nameserver information manager...
+         Starting Nameserver information manager...
+[   19.583030] systemd[1]: Mounting Debug File System...
+         Mounting Debug File System...
+[   19.649294] systemd[1]: Starting Load Kernel Modules...
+         Starting Load Kernel Modules...
+[   19.680858] systemd[1]: Starting Set console keymap...
+         Starting Set console keymap...
+[   19.686837] systemd[1]: Mounting POSIX Message Queue File System...
+[   19.688866] EXT4-fs (sda1): re-mounted. Opts: (null)
+         Mounting POSIX Message Queue File System...
+[   19.721667] systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+[[0;32m  OK  [0m] Set up automount Arbitrary Executab...ats File System Automount Point.
+[   19.757059] Loading iSCSI transport class v2.0-870.
+[   19.762615] systemd[1]: Listening on Device-mapper event daemon FIFOs.
+[[0;32m  OK  [0m] Listening on Device-mapper event daemon FIFOs.
+[   19.783546] systemd[1]: Reached target User and Group Name Lookups.
+[[0;32m  OK  [0m] Reached target User and Group Name Lookups.
+[   19.795187] systemd[1]: Listening on LVM2 metadata daemon socket.
+[[0;32m  OK  [0m] Listening on LVM2 metadata daemon socket.
+[   19.833146] systemd[1]: Starting Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+         Starting Monitoring of LVM2 mirrors... dmeventd or progress polling...
+[   19.868224] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[[0;32m  OK  [0m] Started Forward Password Requests to Wall Directory Watch.
+[   19.901003] systemd[1]: Mounting Huge Pages File System...
+[   19.910299] iscsi: registered transport (tcp)
+         Mounting Huge Pages File System...
+[   19.914928] systemd[1]: Starting Create list of required static device nodes for the current kernel...
+         Starting Create list of required st... nodes for the current kernel...
+[   19.920908] systemd[1]: Listening on Syslog Socket.
+[[0;32m  OK  [0m] Listening on Syslog Socket.
+[   19.925605] systemd[1]: Starting Journal Service...
+         Starting Journal Service...
+[   20.087230] systemd[1]: Mounted Huge Pages File System.
 [[0;32m  OK  [0m] Mounted Huge Pages File System.
-[   23.428278] systemd[1]: Mounted POSIX Message Queue File System.
+[   20.099852] systemd[1]: Mounted POSIX Message Queue File System.
 [[0;32m  OK  [0m] Mounted POSIX Message Queue File System.
-[   23.452959] systemd[1]: Started Remount Root and Kernel File Systems.
+[   20.104544] systemd[1]: Mounted Debug File System.
+[[0;32m  OK  [0m] Mounted Debug File System.
+[   20.139035] systemd[1]: Started Remount Root and Kernel File Systems.
 [[0;32m  OK  [0m] Started Remount Root and Kernel File Systems.
-[   23.613948] systemd[1]: Starting udev Coldplug all Devices...
-         Starting udev Coldplug all Devices...
-[   23.668055] systemd[1]: Starting Load/Save Random Seed...
-         Starting Load/Save Random Seed...
-[   23.686099] systemd[1]: Started Nameserver information manager.
-[[0;32m  OK  [0m] Started Nameserver information manager.
-[   23.952173] systemd[1]: Started LVM2 metadata daemon.
-[[0;32m  OK  [0m] Started LVM2 metadata daemon.
-[   24.113133] systemd[1]: Started Load/Save Random Seed.
-[[0;32m  OK  [0m] Started Load/Save Random See[   24.162346] iscsi: registered transport (iser)
-d.
-[   24.191168] systemd[1]: Started udev Coldplug all Devices.
-[[0;32m  OK  [0m] Started udev Coldplug all Devices.
-[   24.198870] systemd[1]: Started Load Kernel Modules.
+[   20.185085] systemd[1]: Started Uncomplicated firewall.
+[[0;32m  OK  [0m] Started Uncomplicated firewa[   20.200540] iscsi: registered transport (iser)
+ll.
+[   20.243968] systemd[1]: Started Load Kernel Modules.
 [[0;32m  OK  [0m] Started Load Kernel Modules.
-[   24.233915] systemd[1]: Started Set console keymap.
+[   20.266446] systemd[1]: Started Set console keymap.
 [[0;32m  OK  [0m] Started Set console keymap.
-[   24.272721] systemd[1]: Starting Apply Kernel Variables...
-         Starting Apply Kernel Variables...
-[   24.288263] systemd[1]: Mounting FUSE Control File System...
-         Mounting FUSE Control File System...
-[   24.298020] systemd[1]: Mounted FUSE Control File System.
-[[0;32m  OK  [0m] Mounted FUSE Control File System.
-[   24.301543] systemd[1]: Started Journal Service.
+[   20.271621] systemd[1]: Started Create list of required static device nodes for the current kernel.
+[[0;32m  OK  [0m] Started Create list of required sta...ce nodes for the current kernel.
+[   20.325846] systemd[1]: Started Nameserver information manager.
+[[0;32m  OK  [0m] Started Nameserver information manager.
+[   20.389531] systemd[1]: Started Journal Service.
 [[0;32m  OK  [0m] Started Journal Service.
+[[0;32m  OK  [0m] Started LVM2 metadata daemon.
+         Starting Create Static Device Nodes in /dev...
+         Starting Apply Kernel Variables...
+         Mounting FUSE Control File System...
          Starting Flush Journal to Persistent Storage...
-[   24.456352] systemd-journald[392]: Received request to flush runtime journal from PID 1
-[[0;32m  OK  [0m] Started Flush Journal to Persistent Storage.
-[[0;32m  OK  [0m] Started Apply Kernel Variables.
+         Starting Load/Save Random Seed...
+         Starting udev Coldplug all Devices...
+[[0;32m  OK  [0m] Mounted FUSE Control File System.
 [[0;32m  OK  [0m] Started Create Static Device Nodes in /dev.
+[[0;32m  OK  [0m] Started Apply Kernel Variables.
+[[0;32m  OK  [0m] Started Load/Save Random Seed.
          Starting udev Kernel Device Manager...
 [[0;32m  OK  [0m] Started Monitoring of LVM2 mirrors,...ng dmeventd or progress polling.
+[[0;32m  OK  [0m] Started Flush Journal to Persistent Storage.
+[[0;32m  OK  [0m] Started udev Coldplug all Devices.
 [[0;32m  OK  [0m] Started udev Kernel Device Manager.
 [[0;32m  OK  [0m] Started Dispatch Password Requests to Console Directory Watch.
 [[0;32m  OK  [0m] Reached target Local File Systems (Pre).
 [[0;32m  OK  [0m] Reached target Local File Systems.
-         Starting Tell Plymouth To Write Out Runtime Data...
-         Starting Create Volatile Files and Directories...
-         Starting LSB: AppArmor initialization...
-         Starting Initial cloud-init job (pre-networking)...
          Starting Set console font and keymap...
+         Starting Tell Plymouth To Write Out Runtime Data...
+         Starting Initial cloud-init job (pre-networking)...
+         Starting LSB: AppArmor initialization...
+         Starting Create Volatile Files and Directories...
 [[0;32m  OK  [0m] Started Tell Plymouth To Write Out Runtime Data.
-[[0;32m  OK  [0m] Started Create Volatile Files and Directories.
 [[0;32m  OK  [0m] Found device /dev/ttyS0.
 [[0;32m  OK  [0m] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
-         Starting Update UTMP about System Boot/Shutdown...
 [[0;32m  OK  [0m] Found device 82540EM Gigabit Ethern...r (PRO/1000 MT Desktop Adapter).
-[[0;32m  OK  [0m] Started Update UTMP about System Boot/Shutdown.
+[[0;32m  OK  [0m] Found device 82540EM Gigabit Ethern...r (PRO/1000 MT Desktop Adapter).
+[[0;32m  OK  [0m] Found device 82540EM Gigabit Ethern...r (PRO/1000 MT Desktop Adapter).
+[[0;32m  OK  [0m] Started Create Volatile Files and Directories.
+         Starting Update UTMP about System Boot/Shutdown...
 [[0;32m  OK  [0m] Started Set console font and keymap.
 [[0;32m  OK  [0m] Created slice system-getty.slice.
+[[0;32m  OK  [0m] Started Update UTMP about System Boot/Shutdown.
 [[0;32m  OK  [0m] Started LSB: AppArmor initialization.
-[   33.761984] cloud-init[495]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 running 'init-local' at Tue, 06 Nov 2018 22:44:07 +0000. Up 30.57 seconds.
+[   27.128259] cloud-init[488]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 running 'init-local' at Thu, 08 Nov 2018 17:33:49 +0000. Up 26.19 seconds.
 [[0;32m  OK  [0m] Started Initial cloud-init job (pre-networking).
 [[0;32m  OK  [0m] Reached target Network (Pre).
-[[0;32m  OK  [0m] Started ifup for enp0s3.
 [[0;32m  OK  [0m] Started ifup for enp0s8.
          Starting Raise network interfaces...
 [[0;32m  OK  [0m] Started ifup for enp0s9.
-[    [0;31m*[0;1;31m*[0m] A start job is running for Raise network interfaces (19s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise network interfaces (19s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise network interfaces (20s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise network interfaces (20s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise network interfaces (21s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise network interfaces (21s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise network interfaces (22s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise network interfaces (23s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise network interfaces (23s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise network interfaces (24s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise network interfaces (24s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise network interfaces (25s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise network interfaces (25s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise network interfaces (26s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise network interfaces (26s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise network interfaces (27s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise network interfaces (27s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise network interfaces (28s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise network interfaces (28s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise network interfaces (29s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise network interfaces (29s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise network interfaces (30s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise network interfaces (31s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise network interfaces (31s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise network interfaces (32s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise network interfaces (32s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise network interfaces (33s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise network interfaces (33s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise network interfaces (34s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise network interfaces (34s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise network interfaces (35s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise network interfaces (35s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise network interfaces (36s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise network interfaces (36s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise network interfaces (37s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise network interfaces (37s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise network interfaces (38s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise network interfaces (38s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise network interfaces (39s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise network interfaces (39s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise network interfaces (40s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise network interfaces (40s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise network interfaces (41s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise network interfaces (41s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise network interfaces (42s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise network interfaces (42s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise network interfaces (43s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise network interfaces (43s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise network interfaces (44s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise network interfaces (44s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise network interfaces (45s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise network interfaces (45s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise network interfaces (46s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise network interfaces (46s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise network interfaces (47s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise network interfaces (47s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise network interfaces (48s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise network interfaces (48s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise network interfaces (49s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise network interfaces (49s / 5min 14s)[K[  [0;31m*[0         Stopping ACPI event daemon...
-         Stopping Authenticate and Authorize Users to Run Privileged Tasks...
-         Stopping Session 4 of user vagrant.
-[[0;32m  OK  [0m] Closed Load/Save RF Kill Switch Status /dev/rfkill Watch.
-[[0;32m  OK  [0m] Stopped target Graphical Interface.
-[[0;32m  OK  [0m] Stopped target Timers.
-[[0;32m  OK  [0m] Stopped Daily Cleanup of Temporary Directories.
-         Stopping Accounts Service...
-[[0;32m  OK  [0m] Stopped Daily apt upgrade and clean activities.
-[[0;32m  OK  [0m] Stopped Daily apt download activities.
-[[0;32m  OK  [0m] Stopped target System Time Synchronized.
-         Stopping User Manager for UID 1000...
-[[0;32m  OK  [0m] Stopped target Cloud-init target.
-[[0;32m  OK  [0m] Stopped Execute cloud user/final scripts.
-[[0;32m  OK  [0m] Stopped Apply the settings specified in cloud-config.
-[[0;32m  OK  [0m] Stopped target Cloud-config availability.
-[[0;32m  OK  [0m] Stopped target Multi-User System.
-         Stopping FUSE filesystem for LXC...
-         Stopping LXD - container startup/shutdown...
-         Stopping LSB: Record successful boot for GRUB...
-         Stopping LSB: automatic crash report generation...
-         Stopping Deferred execution scheduler...
-         Stopping OpenBSD Secure Shel.         Stopping LSB: MD monitoring daemon...
-[[0;32m  OK  [0m] Unmounted /var/lib/lxcfs.
-[[0;32m  OK  [0m] Stopped Deferred execution scheduler.
-[[0;32m  OK  [0m] Stopped Accounts Service.
-[[0;32m  OK  [0m] Stopped ACPI event daemon.
-[[0;32m  OK  [0m] Stopped Regular background program processing daemon.
-[[0;32m  OK  [0m] Stopped System Logging Service.
-[[0;32m  OK  [0m] Stopped Snappy daemon.
-[[0;32m  OK  [0m] Stopped Authenticate and Authorize Users to Run Privileged Tasks.
-[[0;32m  OK  [0m] Stopped Getty on tty1.
-[[0;32m  OK  [0m] Stopped Serial Getty on ttyS0.
-[[0;32m  OK  [0m] Stopped OpenBSD Secure Shell server.
-[[0;32m  OK  [0m] Stopped User Manager for UID 1000.
-[[0;32m  OK  [0m] Stopped Session 4 of user vagrant.
-[[0;32m  OK  [0m] Stopped D-Bus System Message Bus.
-[[0;32m  OK  [0m] Stopped FUSE filesystem for LXC.
-[[0;32m  OK  [0m] Stopped LSB: automatic crash report generation.
-[[0;32m  OK  [0m] Stopped LXD - container startup/shutdown.
-[[0;32m  OK  [0m] Stopped LSB: Set the CPU Frequency Scaling governor to "ondemand".
-[[0;32m  OK  [0m] Stopped LSB: MD monitoring daemon.
-[[0;32m  OK  [0m] Stopped LSB: Record successful boot for GRUB.
-[[0;32m  OK  [0m] Stopped LSB: daemon to balance interrupts for SMP systems.
-[[0;32m  OK  [0m] Removed slice User Slice of vagrant.
-         Stopping Login Service...
-[[0;32m  OK  [0m] Removed slice system-serial\x2dgetty.slice.
-[[0;32m  OK  [0m] Removed slice system-getty.slice.
-         Stopping Permit User Sessions...
-[[0;32m  OK  [0m] Stopped /etc/rc.local Compatibility.
-[[0;32m  OK  [0m] Stopped Virtualbox guest utils.
-[[0;32m  OK  [0m] Stopped Permit User Sessions.
-[[0;32m  OK  [0m] Stopped target Remote File Systems.
-[[0;32m  OK  [0m] Stopped target Remote File Systems (Pre).
-         Stopping Login to default iSCSI targets...
-[[0;32m  OK  [0m] Stopped Login Service.
-[[0;32m  OK  [0m] Stopped target User and Group Name Lookups.
-[[0;32m  OK  [0m] Stopped Unattended Upgrades Shutdown.
-[[0;32m  OK  [0m] Stopped Login to default iSCSI targets.
-         Stopping iSCSI initiator daemon (iscsid)...
-[[0;32m  OK  [0m] Stopped iSCSI initiator daemon (iscsid).
-[[0;32m  OK  [0m] Stopped target Network is Online.
-[[0;32m  OK  [0m] Stopped MySQL Community Server.
-[[0;32m  OK  [0m] Stopped target Network.
-[[0;32m  OK  [0m] Stopped target Basic System.
-[[0;32m  OK  [0m] Stopped target Paths.
-[[0;32m  OK  [0m] Stopped ACPI Events Check.
-[[0;32m  OK  [0m] Stopped Forward Password Requests to Wall Directory Watch.
-[[0;32m  OK  [0m] Stopped Dispatch Password Requests to Console Directory Watch.
-[[0;32m  OK  [0m] Stopped target Sockets.
-[[0;32m  OK  [0m] Closed UUID daemon activation socket.
-[[0;32m  OK  [0m] Closed Syslog Socket.
-[[0;32m  OK  [0m] Closed ACPID Listen Socket.
-[[0;32m  OK  [0m] Closed LXD - unix socket.
-[[0;32m  OK  [0m] Closed D-Bus System Message Bus Socket.
-[[0;32m  OK  [0m] Closed Socket activation for snappy daemon.
-[[0;32m  OK  [0m] Stopped target System Initialization.
-[[0;32m  OK  [0m] Stopped Initial cloud-init job (metadata service crawler).
-         Stopping Raise network interfaces...
-[[0;32m  OK  [0m] Stopped target Swap.
-         Stopping Update UTMP about System Boot/Shutdown...
-         Stopping Load/Save Random Seed...
-[[0;32m  OK  [0m] Stopped target Encrypted Volumes.
-[[0;32m  OK  [0m] Stopped target Slices.
-[[0;32m  OK  [0m] Removed slice User and Session Slice.
-[[0;32m  OK  [0m] Stopped Load/Save Random Seed.
-[[0;32m  OK  [0m] Stopped Update UTMP about System Boot/Shutdown.
-[[0;32m  OK  [0m] Stopped Create Volatile Files and Directories.
-[[0;32m  OK  [0m] Stopped Raise network interfaces.
-[[0;32m  OK  [0m] Stopped target Local File Systems.
-         Unmounting /run/user/1000...
-         Unmounting /vagrant...
-[[0;32m  OK  [0m] Stopped target Network (Pre).
-[[0;32m  OK  [0m] Stopped Initial cloud-init job (pre-networking).
-[[0;32m  OK  [0m] Stopped Apply Kernel Variables.
-[[0;32m  OK  [0m] Stopped Load Kernel Modules.
-[[0;32m  OK  [0m] Unmounted /run/user/1000.
-[[0;32m  OK  [0m] Unmounted /vagrant.
-[[0;32m  OK  [0m] Reached target Unmount All Filesystems.
-[[0;32m  OK  [0m] Stopped target Local File Systems (Pre).
-         Stopping Monitoring of LVM2 mirrors... dmeventd or progress polling...
-[[0;32m  OK  [0m] Stopped Remount Root and Kernel File Systems.
-[[0;32m  OK  [0m] Stopped Create Static Device Nodes in /dev.
-[[0;32m  OK  [0m] Reached target Shutdown.
-[ 4809.716538] reboot: Power down
-ob is running for Raise ne...interfaces (1min 18s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (1min 18s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (1min 19s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (1min 19s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (1min 20s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (1min 20s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (1min 21s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (1min 21s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (1min 22s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (1min 22s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (1min 23s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (1min 23s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (1min 24s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (1min 24s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (1min 25s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (1min 25s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (1min 26s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (1min 26s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (1min 27s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (1min 27s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (1min 28s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (1min 29s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (1min 29s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (1min 30s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (1min 30s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (1min 31s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (1min 31s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (1min 32s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (1min 32s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (1min 33s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (1min 33s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (1min 34s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (1min 34s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (1min 35s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (1min 35s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (1min 36s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (1min 36s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (1min 37s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (1min 37s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (1min 38s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (1min 38s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (1min 39s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (1min 39s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (1min 40s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (1min 40s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (1min 41s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (1min 41s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (1min 42s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (1min 42s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (1min 43s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (1min 43s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (1min 44s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (1min 44s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (1min 45s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (1min 45s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (1min 46s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (1min 46s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (1min 47s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (1min 47s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (1min 48s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (1min 48s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (1min 49s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (1min 49s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (1min 50s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (1min 50s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (1min 51s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (1min 51s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (1min 52s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (1min 52s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (1min 53s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (1min 53s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (1min 54s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (1min 54s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (1min 55s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (1min 55s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (1min 56s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (1min 56s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (1min 57s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (1min 57s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (1min 58s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (1min 58s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (1min 59s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (1min 59s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise network interfaces (2min / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise network interfaces (2min / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne... interfaces (2min 1s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne... interfaces (2min 1s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne... interfaces (2min 2s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne... interfaces (2min 2s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne... interfaces (2min 3s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne... interfaces (2min 3s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne... interfaces (2min 4s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne... interfaces (2min 4s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne... interfaces (2min 5s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne... interfaces (2min 5s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne... interfaces (2min 6s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne... interfaces (2min 6s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne... interfaces (2min 7s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne... interfaces (2min 7s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne... interfaces (2min 8s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne... interfaces (2min 8s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne... interfaces (2min 9s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne... interfaces (2min 9s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (2min 10s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 10s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 11s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 11s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 12s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 12s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 13s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (2min 13s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 14s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 14s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 15s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 15s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 16s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 16s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (2min 17s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 17s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 18s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 18s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 19s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 19s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 20s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (2min 21s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 21s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 21s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 22s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 22s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 23s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 23s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (2min 24s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 24s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 25s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 25s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 26s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 26s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 27s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (2min 27s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 28s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 28s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 29s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 29s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 30s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 30s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (2min 31s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 31s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 32s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 32s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 33s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 33s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 34s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (2min 34s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 35s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 35s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 36s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 36s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 37s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 37s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (2min 38s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 38s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 39s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 39s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 40s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 40s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 41s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (2min 41s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 42s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 42s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 43s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 43s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 44s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 44s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (2min 45s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 45s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 46s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 46s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 47s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 47s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 48s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (2min 48s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 49s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 49s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 50s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 50s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 51s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 51s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (2min 52s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 52s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 53s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 53s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 54s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 54s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 55s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (2min 55s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (2min 56s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (2min 56s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (2min 57s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (2min 57s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (2min 58s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (2min 59s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (2min 59s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise network interfaces (3min / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise network interfaces (3min / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne... interfaces (3min 1s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne... interfaces (3min 1s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne... interfaces (3min 2s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne... interfaces (3min 2s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne... interfaces (3min 3s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne... interfaces (3min 3s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne... interfaces (3min 4s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne... interfaces (3min 4s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne... interfaces (3min 5s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne... interfaces (3min 5s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne... interfaces (3min 6s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne... interfaces (3min 6s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne... interfaces (3min 7s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne... interfaces (3min 7s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne... interfaces (3min 8s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne... interfaces (3min 8s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne... interfaces (3min 9s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne... interfaces (3min 9s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (3min 10s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 10s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 11s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 11s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 12s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 12s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 13s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (3min 13s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 14s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 14s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 15s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 15s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 16s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 16s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (3min 17s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 17s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 18s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 18s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 19s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 19s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 20s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (3min 20s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 21s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 21s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 22s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 22s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 23s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 23s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (3min 24s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 24s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 25s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 25s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 26s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 26s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 27s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (3min 27s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 28s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 29s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 29s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 29s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 30s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 30s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (3min 31s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 31s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 32s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 32s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 33s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 33s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 34s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (3min 34s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 35s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 35s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 36s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 36s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 37s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 37s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (3min 38s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 39s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 39s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 40s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 40s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 41s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 41s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (3min 42s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 42s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 43s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 43s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 44s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 44s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 45s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (3min 45s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 46s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 46s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 47s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 47s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 48s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 48s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (3min 49s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 49s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 50s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 50s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 51s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 51s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 52s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (3min 53s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 53s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 53s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 54s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 54s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 55s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 55s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (3min 56s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (3min 57s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (3min 57s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (3min 58s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (3min 58s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (3min 59s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (3min 59s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise network interfaces (4min / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise network interfaces (4min / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne... interfaces (4min 1s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne... interfaces (4min 2s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne... interfaces (4min 2s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne... interfaces (4min 2s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne... interfaces (4min 3s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne... interfaces (4min 3s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne... interfaces (4min 4s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne... interfaces (4min 4s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne... interfaces (4min 5s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne... interfaces (4min 5s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne... interfaces (4min 6s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne... interfaces (4min 6s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne... interfaces (4min 7s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne... interfaces (4min 7s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne... interfaces (4min 8s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne... interfaces (4min 9s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne... interfaces (4min 9s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 10s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 10s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (4min 11s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 11s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 12s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 12s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 13s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 13s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 14s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (4min 14s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 15s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 15s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 16s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 17s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 17s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 18s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (4min 18s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 19s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 19s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 20s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 20s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 21s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 21s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (4min 22s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 22s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 23s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 23s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 24s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 24s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 25s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (4min 25s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 26s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 26s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 27s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 28s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 28s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 29s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (4min 29s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 30s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 30s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 31s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 31s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 32s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 32s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (4min 33s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 33s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 34s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 34s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 35s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 35s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 36s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (4min 37s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 37s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 38s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 39s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 39s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 40s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 40s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (4min 41s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 41s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 42s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 42s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 43s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 43s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 44s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (4min 44s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 45s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 45s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 46s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 46s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 47s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 47s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (4min 48s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 48s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 49s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 50s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 50s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 51s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 51s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (4min 52s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 52s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 53s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 53s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 54s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 54s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 55s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (4min 55s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (4min 56s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (4min 56s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (4min 57s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (4min 57s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (4min 58s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 58s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (4min 59s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (4min 59s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise network interfaces (5min / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise network interfaces (5min / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne... interfaces (5min 1s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne... interfaces (5min 2s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne... interfaces (5min 2s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne... interfaces (5min 3s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne... interfaces (5min 3s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne... interfaces (5min 4s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne... interfaces (5min 4s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne... interfaces (5min 5s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne... interfaces (5min 5s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne... interfaces (5min 6s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne... interfaces (5min 6s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne... interfaces (5min 7s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne... interfaces (5min 7s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne... interfaces (5min 8s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne... interfaces (5min 8s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne... interfaces (5min 9s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne... interfaces (5min 9s / 5min 14s)[K[[0m[0;31m*     [0m] A start job is running for Raise ne...interfaces (5min 10s / 5min 14s)[K[[0;1;31m*[0m[0;31m*    [0m] A start job is running for Raise ne...interfaces (5min 10s / 5min 14s)[K[[0;31m*[0;1;31m*[0m[0;31m*   [0m] A start job is running for Raise ne...interfaces (5min 11s / 5min 14s)[K[ [0;31m*[0;1;31m*[0m[0;31m*  [0m] A start job is running for Raise ne...interfaces (5min 11s / 5min 14s)[K[  [0;31m*[0;1;31m*[0m[0;31m* [0m] A start job is running for Raise ne...interfaces (5min 12s / 5min 14s)[K[   [0;31m*[0;1;31m*[0m[0;31m*[0m] A start job is running for Raise ne...interfaces (5min 12s / 5min 14s)[K[    [0;31m*[0;1;31m*[0m] A start job is running for Raise ne...interfaces (5min 13s / 5min 14s)[K[     [0;31m*[0m] A start job is running for Raise ne...interfaces (5min 14s / 5min 14s)[K[[0;1;31mFAILED[0m] Failed to start Raise network interfaces.
-See 'systemctl status networking.service' for details.
+[[0;32m  OK  [0m] Started ifup for enp0s3.
+[[0;32m  OK  [0m] Started Raise network interfaces.
 [[0;32m  OK  [0m] Reached target Network.
          Starting Initial cloud-init job (metadata service crawler)...
-[  337.638529] cloud-init[1092]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 running 'init' at Tue, 06 Nov 2018 22:49:12 +0000. Up 335.89 seconds.
-[  337.672991] cloud-init[1092]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info+++++++++++++++++++++++++++++++++++++++
-[  337.691466] cloud-init[1092]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
-[  337.727751] cloud-init[1092]: ci-info: | Device |  Up  |           Address           |      Mask     | Scope  |     Hw-Address    |
-[  337.736657] cloud-init[1092]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
-[  337.792796] cloud-init[1092]: ci-info: | enp0s3 | True |          10.0.2.15          | 255.255.255.0 | global | 02:20:67:8c:d5:af |
-[  337.793648] cloud-init[1092]: ci-info: | enp0s3 | True |  fe80::20:67ff:fe8c:d5af/64 |       .       |  link  | 02:20:67:8c:d5:af |
-[  337.794197] cloud-init[1092]: ci-info: | enp0s8 | True | fe80::a00:27ff:fea7:7b37/64 |       .       |  link  | 08:00:27:a7:7b:37 |
-[  337.794713] cloud-init[1092]: ci-info: | enp0s9 | True |         192.168.0.20        | 255.255.255.0 | global | 08:00:27:8f:b7:1e |
-[  337.795232] cloud-init[1092]: ci-info: | enp0s9 | True | fe80::a00:27ff:fe8f:b71e/64 |       .       |  link  | 08:00:27:8f:b7:1e |
-[  337.795767] cloud-init[1092]: ci-info: |   lo   | True |          127.0.0.1          |   255.0.0.0   |  host  |         .         |
-[  337.796338] cloud-init[1092]: ci-info: |   lo   | True |           ::1/128           |       .       |  host  |         .         |
-[  337.796812] cloud-init[1092]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
-[  337.797377] cloud-init[1092]: ci-info: +++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++++++
-[  337.797901] cloud-init[1092]: ci-info: +-------+-------------+----------+---------------+-----------+-------+
-[  337.798462] cloud-init[1092]: ci-info: | Route | Destination | Gateway  |    Genmask    | Interface | Flags |
-[  337.799766] cloud-init[1092]: ci-info: +-------+-------------+----------+---------------+-----------+-------+
-[  337.801448] cloud-init[1092]: ci-info: |   0   |   0.0.0.0   | 10.0.2.2 |    0.0.0.0    |   enp0s3  |   UG  |
-[  337.801955] cloud-init[1092]: ci-info: |   1   |   10.0.2.0  | 0.0.0.0  | 255.255.255.0 |   enp0s3  |   U   |
-[  337.802500] cloud-init[1092]: ci-info: |   2   | 192.168.0.0 | 0.0.0.0  | 255.255.255.0 |   enp0s9  |   U   |
-[  337.803772] cloud-init[1092]: ci-info: +-------+-------------+----------+---------------+-----------+-------+
-[  337.805785] cloud-init[1092]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
-[  337.806606] cloud-init[1092]: ci-info: +-------+-------------+---------+-----------+-------+
-[  337.807717] cloud-init[1092]: ci-info: | Route | Destination | Gateway | Interface | Flags |
-[  337.808456] cloud-init[1092]: ci-info: +-------+-------------+---------+-----------+-------+
-[  337.809051] cloud-init[1092]: ci-info: |   0   |  fe80::/64  |    ::   |   enp0s9  |   U   |
-[  337.809568] cloud-init[1092]: ci-info: |   1   |  fe80::/64  |    ::   |   enp0s3  |   U   |
+[   31.582794] cloud-init[1208]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 running 'init' at Thu, 08 Nov 2018 17:33:54 +0000. Up 30.46 seconds.
+[   31.589423] cloud-init[1208]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info+++++++++++++++++++++++++++++++++++++++
+[   31.681460] cloud-init[1208]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+[   31.682102] cloud-init[1208]: ci-info: | Device |  Up  |           Address           |      Mask     | Scope  |     Hw-Address    |
+[   31.683546] cloud-init[1208]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
 [[0;32m  OK  [0m] Started Initial cloud-init job (metadata service crawler).
-[  337.810062] cloud-init[1092]: ci-info: |   2   |  fe80::/64  |    ::   |   enp0s8  |   U   |
-[  337.914897] cloud-init[1092]: ci-info: |   8   |   ff00::/8  |    ::   |   enp0s9  |   U   |
-[  337.919597] cloud-init[1092]: ci-info: |   9   |   ff00::/8  |    ::   |   enp0s3  |   U   |
-[  337.924129] cloud-init[1092]: ci-info: |   10  |   ff00::/8  |    ::   |   enp0s8  |   U   |
-[  337.929007] cloud-init[1092]: ci-info: +-------+-------------+---------+-----------+-------+
-[[0;32m  OK  [0m] Reached target Cloud-config availability.
+[   31.684614] cloud-init[1208]: ci-info: | enp0s3 | True |          10.0.2.15          | 255.255.255.0 | global | 02:20:67:8c:d5:af |
+[   31.716880] cloud-init[1208]: ci-info: | enp0s3 | True |  fe80::20:67ff:fe8c:d5af/64 |       .       |  link  | 02:20:67:8c:d5:af |
+[   31.717513] cloud-init[1208]: ci-info: | enp0s8 | True |         192.168.1.14        | 255.255.255.0 | global | 08:00:27:a7:7b:37 |
+[   31.717813] cloud-init[1208]: ci-info: | enp0s8 | True | fe80::a00:27ff:fea7:7b37/64 |       .       |  link  | 08:00:27:a7:7b:37 |
+[[0;32m  OK  [0m] Reached target System Initialization.
+[   31.718194] cloud-init[1208]: ci-info: | enp0s9 | True |         192.168.0.20        | 255.255.255.0 | global | 08:00:27:8f:b7:1e |
+         Starting Socket activation for snappy daemon.
+[   31.732715] cloud-init[1208]: ci-info: | enp0s9 | True | fe80::a00:27ff:fe8f:b71e/64 |       .       |  link  | 08:00:27:8f:b7:1e |
+[   31.828755] [cloud-init[0;32m  OK  [0m[1208]: ] ci-info: |   lo   | True |          127.0.0.1          |   255.0.0.0   |  host  |         .         |Started ACPI Events Check.
+
+[   31.849090] [cloud-init[0;32m  OK  [0m[1208]: ] ci-info: |   lo   | True |           ::1/128           |       .       |  host  |         .         |Reached target Paths.
+
+[   31.849669] cloud-init[1208]: ci-info: +--------+------+-----------------------------+---------------+--------+-------------------+
+[   31.867169] cloud-init[1208]: ci-info: +++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++++++
+[   31.880881] cloud-init[1208]: ci-info: +-------+-------------+----------+---------------+-----------+-------+
+[   31.888784] cloud-init[1208]: ci-info: | Route | Destination | Gateway  |    Genmask    | Interface | Flags |
+[   31.893378] cloud-init[1208]: ci-info: +-------+-------------+----------+---------------+-----------+-------+
+[   31.896912] cloud-init[1208]: ci-info: |   0   |   0.0.0.0   | 10.0.2.2 |    0.0.0.0    |   enp0s3  |   UG  |
+[   31.900138] cloud-init[1208]: ci-info: |   1   |   10.0.2.0  | 0.0.0.0  | 255.255.255.0 |   enp0s3  |   U   |
+[   31.903572] cloud-init[1208]: ci-info: |   2   | 192.168.0.0 | 0.0.0.0  | 255.255.255.0 |   enp0s9  |   U   |
+[   31.937851] [cloud-init[0;32m  OK  [0m[1208]: ] ci-info: |   3   | 192.168.1.0 | 0.0.0.0  | 255.255.255.0 |   enp0s8  |   U   |Started Daily apt download activities.
+
+[   31.950239] [cloud-init[0;32m  OK  [0m[1208]: ] ci-info: +-------+-------------+----------+---------------+-----------+-------+Started Daily apt upgrade and clean activities.
+
+[   31.950795] [cloud-init[0;32m  OK  [0m[1208]: ] ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++Started Daily Cleanup of Temporary Directories.
+
+[   31.955451] [cloud-init[0;32m  OK  [0m[1208]: ] ci-info: +-------+-------------+---------+-----------+-------+Listening on D-Bus System Message Bus Socket.
+
+[   31.979648] [cloud-init[0;32m  OK  [0m[1208]: ] ci-info: | Route | Destination | Gateway | Interface | Flags |Listening on ACPID Listen Socket.
+
+[[   31.980357] [0;32m  OK  [0mcloud-init] [1208]: Started Clean PHP session files every 30 mins.ci-info: +-------+-------------+---------+-----------+-------+
+
+[   32.017454] [cloud-init[0;32m  OK  [0m[1208]: ] ci-info: |   0   |  fe80::/64  |    ::   |   enp0s9  |   U   |Listening on UUID daemon activation socket.
+
+[   32.021551] cloud-init[1208]: ci-info: |   1   |  fe80::/64  |    ::   |   enp0s3  |   U   |
+[   32.024202] cloud-init[1208]: ci-info: |   2   |  fe80::/64  |    ::   |   enp0s8  |   U   |
+[   32.026935] cloud-init[1208]: ci-info: |   8   |   ff00::/8  |    ::   |   enp0s9  |   U   |
+[   32.033345] cloud-init[1208]: ci-info: |   9   |   ff00::/8  |    ::   |   enp0s3  |   U   |
+[   32.036385] cloud-init[1208]: ci-info: |   10  |   ff00::/8  |    ::   |   enp0s8  |   U   |
+[   32.039354] cloud-init[1208]: ci-info: +-------+-------------+---------+-----------+-------+
+         Starting LXD - unix socket.
+[[0;32m  OK  [0m] Reached target Timers.
 [[0;32m  OK  [0m] Reached target Network is Online.
          Starting iSCSI initiator daemon (iscsid)...
-[[0;32m  OK  [0m] Reached target System Initialization.
-[[0;32m  OK  [0m] Listening on D-Bus System Message Bus Socket.
-[[0;32m  OK  [0m] Listening on ACPID Listen Socket.
-[[0;32m  OK  [0m] Started ACPI Events Check.
-[[0;32m  OK  [0m] Reached target Paths.
-[[0;32m  OK  [0m] Started Daily Cleanup of Temporary Directories.
-         Starting Socket activation for snappy daemon.
-         Starting LXD - unix socket.
-[[0;32m  OK  [0m] Listening on UUID daemon activation socket.
-[[0;32m  OK  [0m] Started Clean PHP session files every 30 mins.
-[[0;32m  OK  [0m] Started Daily apt download activities.
-[[0;32m  OK  [0m] Started Daily apt upgrade and clean activities.
-[[0;32m  OK  [0m] Reached target Timers.
+[[0;32m  OK  [0m] Reached target Cloud-config availability.
 [[0;32m  OK  [0m] Listening on Socket activation for snappy daemon.
 [[0;32m  OK  [0m] Listening on LXD - unix socket.
 [[0;32m  OK  [0m] Reached target Sockets.
 [[0;32m  OK  [0m] Reached target Basic System.
-[[0;32m  OK  [0m] Started D-Bus System Message Bus.
-[[0;32m  OK  [0m] Started Unattended Upgrades Shutdown.
-         Starting OpenBSD Secure Shell server...
-         Starting Virtualbox guest utils...
-         Starting LSB: Record successful boot for GRUB...
-         Starting LSB: MD monitoring daemon...
-[[0;32m  OK  [0m] Started FUSE filesystem for LXC.
-         Starting Snappy daemon...
-[[0;32m  OK  [0m] Started Deferred execution scheduler.
-[[0;32m  OK  [0m] Started Regular background program processing daemon.
-         Starting LXD - container startup/shutdown...
-         Starting Login Service...
-         Starting Accounts Service...
-         Starting /etc/rc.local Compatibility...
-         Starting System Logging Service...
 [[0;32m  OK  [0m] Started ACPI event daemon.
+[[0;32m  OK  [0m] Started FUSE filesystem for LXC.
+[[0;32m  OK  [0m] Started Unattended Upgrades Shutdown.
          Starting Clean php session files...
-[[0;32m  OK  [0m] Started iSCSI initiator daemon (iscsid).
+         Starting LXD - container startup/shutdown...
+[[0;32m  OK  [0m] Started Regular background program processing daemon.
+         Starting Accounts Service...
+         Starting Virtualbox guest utils...
+         Starting Login Service...
+         Starting LSB: MD monitoring daemon...
+         Starting /etc/rc.local Compatibility...
+[[0;32m  OK  [0m] Started D-Bus System Message Bus.
+         Starting OpenBSD Secure Shell server...
+         Starting System Logging Service...
+         Starting LSB: Record successful boot for GRUB...
+[[0;32m  OK  [0m] Started Deferred execution scheduler.
+         Starting Snappy daemon...
 [[0;32m  OK  [0m] Started /etc/rc.local Compatibility.
-         Starting Login to default iSCSI targets...
 [[0;32m  OK  [0m] Started Login Service.
+[[0;32m  OK  [0m] Started iSCSI initiator daemon (iscsid).
+         Starting Login to default iSCSI targets...
+[[0;32m  OK  [0m] Started LSB: Record successful boot for GRUB.
 [[0;32m  OK  [0m] Started LSB: MD monitoring daemon.
+         Starting Authenticate and Authorize Users to Run Privileged Tasks...
+[[0;32m  OK  [0m] Started System Logging Service.
 [[0;32m  OK  [0m] Started Login to default iSCSI targets.
 [[0;32m  OK  [0m] Reached target Remote File Systems (Pre).
 [[0;32m  OK  [0m] Reached target Remote File Systems.
-         Starting LSB: daemon to balance interrupts for SMP systems...
-         Starting Permit User Sessions...
-         Starting LSB: Set the CPU Frequency Scaling governor to "ondemand"...
-         Starting LSB: Apache2 web server...
          Starting LSB: automatic crash report generation...
-[[0;32m  OK  [0m] Started LSB: Record successful boot for GRUB.
+         Starting Permit User Sessions...
+         Starting LSB: daemon to balance interrupts for SMP systems...
+         Starting LSB: Apache2 web server...
+         Starting LSB: Set the CPU Frequency Scaling governor to "ondemand"...
+[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
 [[0;32m  OK  [0m] Started Permit User Sessions.
+[[0;32m  OK  [0m] Started Virtualbox guest utils.
+[[0;32m  OK  [0m] Started Authenticate and Authorize Users to Run Privileged Tasks.
+[[0;32m  OK  [0m] Started Accounts Service.
 [[0;32m  OK  [0m] Started LSB: Set the CPU Frequency Scaling governor to "ondemand".
          Starting Terminate Plymouth Boot Screen...
          Starting Hold until boot process finishes up...
-[[0;32m  OK  [0m] Started System Logging Service.
 [[0;32m  OK  [0m] Started Terminate Plymouth Boot Screen.
 [[0;32m  OK  [0m] Started Hold until boot process finishes up.
 [[0;32m  OK  [0m] Started Serial Getty on ttyS0.
-         Starting Set console scheme...
 [[0;32m  OK  [0m] Started Getty on tty1.
 [[0;32m  OK  [0m] Reached target Login Prompts.
+         Starting Set console scheme...
 [[0;32m  OK  [0m] Started LSB: daemon to balance interrupts for SMP systems.
 [[0;32m  OK  [0m] Started Set console scheme.
 [[0;32m  OK  [0m] Started LSB: automatic crash report generation.
-[[0;32m  OK  [0m] Started OpenBSD Secure Shell server.
-[[0;32m  OK  [0m] Started Virtualbox guest utils.
-         Starting Authenticate and Authorize Users to Run Privileged Tasks...
-[[0;32m  OK  [0m] Started Authenticate and Authorize Users to Run Privileged Tasks.
-[[0;32m  OK  [0m] Started Accounts Service.
+[[0;32m  OK  [0m] Created slice User Slice of vagrant.
+         Starting User Manager for UID 1000...
+[[0;32m  OK  [0m] Started Session 1 of user vagrant.
+[[0;32m  OK  [0m] Started LXD - container startup/shutdown.
+[[0;32m  OK  [0m] Started User Manager for UID 1000.
 [[0;32m  OK  [0m] Started Snappy daemon.
          Starting Wait until snapd is fully seeded...
-[[0;32m  OK  [0m] Started LXD - container startup/shutdown.
 [[0;32m  OK  [0m] Started Wait until snapd is fully seeded.
          Starting Apply the settings specified in cloud-config...
-[  345.740142] cloud-init[1364]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 running 'modules:config' at Tue, 06 Nov 2018 22:49:22 +0000. Up 345.14 seconds.
+[   40.965572] cloud-init[1553]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 running 'modules:config' at Thu, 08 Nov 2018 17:34:04 +0000. Up 40.54 seconds.
 
 Ubuntu 16.04.5 LTS gnet-web ttyS0
 
-gnet-web login: [  349.359742] cloud-init[1413]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 running 'modules:final' at Tue, 06 Nov 2018 22:49:25 +0000. Up 348.80 seconds.
-[  349.360891] cloud-init[1413]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 finished at Tue, 06 Nov 2018 22:49:26 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 349.33 seconds
+gnet-web login: [   43.473171] cloud-init[1742]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 running 'modules:final' at Thu, 08 Nov 2018 17:34:06 +0000. Up 43.17 seconds.
+[   43.473760] cloud-init[1742]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 finished at Thu, 08 Nov 2018 17:34:07 +0000. Datasource DataSourceNoCloud [seed=/dev/sdb][dsmode=net].  Up 43.46 seconds
