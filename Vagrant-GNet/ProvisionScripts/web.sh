@@ -11,6 +11,8 @@ Yellow='\033[0;33m'       # Yellow
 Purple='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 
+DBPassword="root"
+DBIPHost="192.168.0.10"
 # Servidor Web utilizado
 WebServer="apache2"
 
@@ -105,32 +107,25 @@ function ConfigurePHP(){
 }
 
 function InstallPHPMyAdmin(){
-    # export DEBIAN_FRONTEND="noninteractive"
-    
-    echo -e "$Cyan \n--- {Instalando PHP [PHPMyAdmin - Configurando entrada sobre las credenciales]} ---\n $Color_Off"
     # Configura las credenciales que pide en paquete
+    echo -e "$Cyan \n--- {Instalando PHP [PHPMyAdmin - Configurando entrada sobre las credenciales]} ---\n $Color_Off"
     echo 'phpmyadmin phpmyadmin/dbconfig-install boolean true' | debconf-set-selections
-    echo 'phpmyadmin phpmyadmin/app-password-confirm password $DBPASSWD' | debconf-set-selections
-    echo 'phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD' | debconf-set-selections
-    echo 'phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD' | debconf-set-selections
+    echo 'phpmyadmin phpmyadmin/app-password-confirm password $DBPassword' | debconf-set-selections
+    echo 'phpmyadmin phpmyadmin/mysql/admin-pass password $DBPassword' | debconf-set-selections
+    echo 'phpmyadmin phpmyadmin/mysql/app-pass password $DBPassword' | debconf-set-selections
     echo 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect $WebServer' | debconf-set-selections
     
-    # echo -e "$Cyan \n--- {Instalando PHP [Levantando proceso en segundo plano]} ---\n $Color_Off"
-    # fg
-    
-    echo -e "$Cyan \n--- {Instalando PHP [Reconfigurando...]} ---\n $Color_Off"
-    # dpkg --configure -a
-    # sudo dpkg --configure -a
-    # sudo dpkg-reconfigure --frontend=noninteractive phpmyadmin
-    # sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/dbconfig-install boolean true"
-    # sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/app-password-confirm password $DBPASSWD"
-    # sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/admin-pass password $DBPASSWD"
-    # sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/mysql/app-pass password $DBPASSWD"
-    # sudo debconf-set-selections <<< "phpmyadmin phpmyadmin/reconfigure-webserver multiselect none"
-
-    echo -e "$Cyan \n--- {Instalando PHP [Instalando PHPMyAdmin]} ---\n $Color_Off"
     # Instala PHPMyAdmin
-    sudo apt-get install -y phpmyadmin
+    echo -e "$Cyan \n--- {Instalando PHP [Instalando PHPMyAdmin]} ---\n $Color_Off"
+    apt-get install -y phpmyadmin >> /var/log/vm_build.log 2>&1
+
+    echo -e "$Cyan \n--- {Configurando PHPMyAdmin [Asignando el servidor remoto: $DBIPHost]} ---\n $Color_Off"
+    # sed -i 's/\$cfg\['Servers'\]\[\$i\]\['host'\] =/\$cfg\['Servers'\]\[\$i\]\['host'\] = \$dbserver/g' /etc/phpmyadmin/config.inc.php
+}
+
+function InstallNMap(){
+    echo -e "$Cyan \n--- {Instalando NMap [Network Mapper]} ---\n $Color_Off"
+    sudo apt-get install -y nmap >> /var/log/vm_build.log 2>&1
 }
 
 function ConfigSSH(){
@@ -142,7 +137,7 @@ function ConfigSSH(){
 
 function AssignUserPassword(){
     echo -e "$Cyan \n--- {Asignando contraseña a un usuario [Credenciales-> Username: $2, Password: $1]} ---\n $Color_Off"
-    echo -e "$1\n$1\n" | sudo passwd $2
+    echo -e "$1\n$1\n" | sudo passwd $2 >> /var/log/vm_build.log 2>&1
 }
 
 function Finish(){
@@ -155,6 +150,7 @@ InstallWebServer
 LinkDirs
 InstallPHP
 ConfigurePHP
+InstallNMap
 InstallPHPMyAdmin
 ConfigSSH
 AssignUserPassword 123 root
