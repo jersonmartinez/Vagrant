@@ -77,7 +77,7 @@ function ConfigSSH(){
 
 function AssignUserPassword(){
     echo -e "$Cyan \n--- {Asignando contraseña a un usuario [Credenciales-> Username: $2, Password: $1]} ---\n $Color_Off"
-    echo -e "$1\n$1\n" | sudo passwd $2
+    echo -e "$1\n$1\n" | sudo passwd $2 >> /var/log/vm_build.log 2>&1
 }
 
 function Finish(){
