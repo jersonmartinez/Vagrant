@@ -84,3 +84,14 @@ For more details, go here: [ConfigDisk/](https://github.com/SideMasterGM/Vagrant
 ```
 vagrant up
 ```
+
+- - -
+### Install Plugins
+**RSync Back** Bidirectional rsync
+```
+vagrant plugin install vagrant-rsync-back
+```
+Mode use: 
+```
+vagrant rsync-back
+```
