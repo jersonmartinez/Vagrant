@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
     
         gnet_db.vm.provider "virtualbox" do |vb|
             vb.name = "DB"
-            vb.memory = "2048"
+            vb.memory = "512"
             vb.cpus = "2"
             vb.linked_clone = true
         end
@@ -22,8 +22,8 @@ Vagrant.configure("2") do |config|
 
         gnet_web.vm.provider "virtualbox" do |vb|
             vb.name = "GNet"
-            vb.memory = "4096"
-            vb.cpus = "4"
+            vb.memory = "512"
+            vb.cpus = "2"
             vb.linked_clone = true
         end
         
@@ -31,5 +31,22 @@ Vagrant.configure("2") do |config|
         gnet_web.vm.network "private_network", ip: "192.168.0.20"
         
         gnet_web.vm.provision "shell", path: "ProvisionScripts/web.sh"
+    end
+
+    config.vm.define "gnet_dns" do |gnet_dns|
+        gnet_dns.vm.box = "ubuntu/xenial64"
+        gnet_dns.vm.hostname = "gnet-dns"
+
+        gnet_dns.vm.provider "virtualbox" do |vb|
+            vb.name = "dns"
+            vb.memory = "512"
+            vb.cpus = "2"
+            vb.linked_clone = true
+        end
+        
+        gnet_dns.vm.network "public_network", bridge: "wlan0"
+        gnet_dns.vm.network "private_network", ip: "192.168.0.30"
+        
+        gnet_dns.vm.provision "shell", path: "ProvisionScripts/dns.sh"
     end
 end

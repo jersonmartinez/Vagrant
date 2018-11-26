@@ -25,7 +25,7 @@ function UpdateHost(){
 
 function BasePackages(){
     echo -e "$Cyan \n--- {Instalando paquetes base [vim, git y debconf-utils]} ---\n $Color_Off"
-    sudo apt-get install -y vim git debconf-utils >> /var/log/vm_build.log 2>&1
+    sudo apt-get install -y vim git debconf-utils upower >> /var/log/vm_build.log 2>&1
 }
 
 function InstallFirewall(){
@@ -80,6 +80,21 @@ function AssignUserPassword(){
     echo -e "$1\n$1\n" | sudo passwd $2 >> /var/log/vm_build.log 2>&1
 }
 
+function CreateSwap(){
+    echo -e "$Cyan \n--- {Creando área de intercambio} ---\n $Color_Off"
+    # Crea un fichero de intercambio de 0.5GB
+    sudo fallocate -l 0.5G /swap 
+    # Cambiando permisos al fichero (Solo accecible por el usuario root)    
+    sudo chmod 600 /swap            
+    # Convierte el fichero como área de intercambio
+    sudo mkswap /swap >> /var/log/vm_build.log 2>&1
+    # habilita el fichero de intercambio
+    sudo swapon /swap
+    #Agrega el fichero crado a /etc/fstab (El espacio de intercambio estará disponible en todo momento) 
+    sudo echo "swap     /swap   swap    defaults    0 0" >> /etc/fstab
+    echo -e "$Green \n--- {El área de intercambio ha sido creado correctamente} ---\n $Color_Off"
+}
+
 function Finish(){
     echo -e "$Yellow \n--- {Instalación Finalizada [FIN del proceso]} ---\n $Color_Off"
 }
@@ -90,4 +105,5 @@ InstallMySQL
 ConfigureMySQL
 ConfigSSH
 AssignUserPassword 123 root
+CreateSwap
 Finish

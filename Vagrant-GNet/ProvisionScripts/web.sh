@@ -17,7 +17,7 @@ DBIPHost="192.168.0.10"
 WebServer="apache2"
 
 # Ruta absoluta donde se agregará el proyecto.
-DirStorage="/var/www/html"
+DirStorage="/var/www/"
 
 # Ruta del directorio compartido
 DirShared="/vagrant/GNet"
@@ -38,15 +38,13 @@ function UpdateHost(){
 }
 
 function BasePackages(){
-    echo -e "$Cyan \n--- {Paquetes base [Instalando: vim, git y debconf-utils]} ---\n $Color_Off"
-    sudo apt-get install -y git debconf-utils build-essential binutils-doc >> /var/log/vm_build.log 2>&1
+    echo -e "$Cyan \n--- {Paquetes base [Instalando: vim, git, debconf-utils y upower]} ---\n $Color_Off"
+    sudo apt-get install -y git debconf-utils build-essential binutils-doc upower >> /var/log/vm_build.log 2>&1
 }
 
 function InstallWebServer(){
     echo -e "$Cyan \n--- {Apache [Instalando servicio]} ---\n $Color_Off"
     sudo apt-get install -y apache2 >> /var/log/vm_build.log 2>&1
-
-    InstallFirewall
 }
 
 function InstallFirewall(){
@@ -104,6 +102,19 @@ function ConfigurePHP(){
     sudo service apache2 restart
 }
 
+function CreateVirtualHost(){
+    echo -e "$Cyan \n--- {Servidor Web [Configuando sitio virtual]} ---\n $Color_Off"
+    sudo echo " 
+<VirtualHost *:80>
+    ServerName www.gnet.local
+    DocumentRoot /var/www/html/GNet
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>" > /etc/apache2/sites-available/gnet.local.conf
+    sudo a2ensite gnet.local.conf
+    sudo service apache2 restart >> /var/log/vm_build.log 2>&1
+}
+
 function InstallPHPMyAdmin(){
     #Limpiar las configuraciones desatendidas sobre la base de datos
     echo -e "$Cyan \n--- {Debconf [FixDB para aplicar instalación desatendida]} ---\n $Color_Off"
@@ -140,12 +151,27 @@ function ConfigSSH(){
     echo -e "$Cyan \n--- {SSH Server [Habilitando las directivas: PasswordAuthentication, PermitRootLogin]} ---\n $Color_Off"
     sed -i 's/PasswordAuthentication/#PasswordAuthentication/g' /etc/ssh/sshd_config
     sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
-    service ssh restart
+    sudo service ssh restart
 }
 
 function AssignUserPassword(){
     echo -e "$Cyan \n--- {Asignando contraseña al usuario [Credenciales-> Username: $2, Password: $1]} ---\n $Color_Off"
     echo -e "$1\n$1\n" | sudo passwd $2 >> /var/log/vm_build.log 2>&1
+}
+
+function CreateSwap(){
+    echo -e "$Cyan \n--- {Creando área de intercambio} ---\n $Color_Off"
+    # Crea un fichero de intercambio de 0.5GB
+    sudo fallocate -l 0.5G /swap 
+    # Cambiando permisos al fichero (Solo accecible por el usuario root)    
+    sudo chmod 600 /swap            
+    # Convierte el fichero como área de intercambio
+    sudo mkswap /swap >> /var/log/vm_build.log 2>&1
+    # habilita el fichero de intercambio
+    sudo swapon /swap
+    #Agrega el fichero crado a /etc/fstab (El espacio de intercambio estará disponible en todo momento) 
+    sudo echo "swap     /swap   swap    defaults    0 0" >> /etc/fstab
+    echo -e "$Yellow \n--- {El área de intercambio ha sido creado con éxito} ---\n $Color_Off"
 }
 
 function Finish(){
@@ -158,8 +184,10 @@ InstallWebServer
 LinkDirs
 InstallPHP
 ConfigurePHP
+CreateVirtualHost
 InstallNMap
 InstallPHPMyAdmin
 ConfigSSH
 AssignUserPassword 123 root
+CreateSwap
 Finish
