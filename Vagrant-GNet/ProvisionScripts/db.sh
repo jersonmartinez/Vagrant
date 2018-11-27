@@ -90,7 +90,7 @@ function CreateSwap(){
     sudo mkswap /swap >> /var/log/vm_build.log 2>&1
     # habilita el fichero de intercambio
     sudo swapon /swap
-    #Agrega el fichero crado a /etc/fstab (El espacio de intercambio estará disponible en todo momento) 
+    #Agrega el fichero creado a /etc/fstab (El espacio de intercambio estará disponible en todo momento) 
     sudo echo "swap     /swap   swap    defaults    0 0" >> /etc/fstab
     echo -e "$Green \n--- {El área de intercambio ha sido creado correctamente} ---\n $Color_Off"
 }

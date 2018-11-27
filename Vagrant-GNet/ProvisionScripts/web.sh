@@ -19,7 +19,7 @@ WebServer="apache2"
 # Ruta absoluta donde se agregará el proyecto.
 DirStorage="/var/www/"
 
-# Ruta del directorio compartido
+# Ruta del directorio compartido phpmyadmin
 DirShared="/vagrant/GNet"
 
 #Crea los directorios que conforman la ruta $DirStorage
@@ -102,19 +102,6 @@ function ConfigurePHP(){
     sudo service apache2 restart
 }
 
-function CreateVirtualHost(){
-    echo -e "$Cyan \n--- {Servidor Web [Configuando sitio virtual]} ---\n $Color_Off"
-    sudo echo " 
-<VirtualHost *:80>
-    ServerName www.gnet.local
-    DocumentRoot /var/www/html/GNet
-    ErrorLog \${APACHE_LOG_DIR}/error.log
-    CustomLog \${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>" > /etc/apache2/sites-available/gnet.local.conf
-    sudo a2ensite gnet.local.conf
-    sudo service apache2 restart >> /var/log/vm_build.log 2>&1
-}
-
 function InstallPHPMyAdmin(){
     #Limpiar las configuraciones desatendidas sobre la base de datos
     echo -e "$Cyan \n--- {Debconf [FixDB para aplicar instalación desatendida]} ---\n $Color_Off"
@@ -140,6 +127,33 @@ function InstallPHPMyAdmin(){
 
     echo -e "$Cyan \n--- {PHPMyAdmin [Configurando ervidor remoto de base de datos: $DBIPHost]} ---\n $Color_Off"
     sudo sed -i.bak -e "s/\$cfg\['Servers'\]\[\$i\]\['host'\] = \$dbserver;/\$cfg['Servers'][\$i]['host'] = '$DBIPHost';/" /etc/phpmyadmin/config.inc.php
+
+    # Creación de enlace simbólico a phpmyadmin
+    ln -s /usr/share/phpmyadmin/ /var/www/
+}
+
+function CreateVirtualHostGNet(){
+    echo -e "$Cyan \n--- {Servidor Web [Configuando sitio virtual GNet]} ---\n $Color_Off"
+    sudo echo "<VirtualHost *:80>
+    ServerName www.gnet.local
+    DocumentRoot /var/www/GNet
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>" > /etc/apache2/sites-available/gnet.local.conf
+    sudo a2ensite gnet.local.conf >> /var/log/vm_build.log 2>&1
+    sudo service apache2 restart >> /var/log/vm_build.log 2>&1
+}
+
+function CreateVirtualHostDB(){
+    echo -e "$Cyan \n--- {Servidor Web [Configuando sitio virtual phpmyadmin]} ---\n $Color_Off"
+    sudo echo "<VirtualHost *:80>
+    ServerName db.gnet.local
+    DocumentRoot /var/www/phpmyadmin
+    ErrorLog \${APACHE_LOG_DIR}/error.log
+    CustomLog \${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>" > /etc/apache2/sites-available/dbgnet.local.conf
+    sudo a2ensite dbgnet.local.conf >> /var/log/vm_build.log 2>&1
+    sudo service apache2 restart >> /var/log/vm_build.log 2>&1
 }
 
 function InstallNMap(){
@@ -169,7 +183,7 @@ function CreateSwap(){
     sudo mkswap /swap >> /var/log/vm_build.log 2>&1
     # habilita el fichero de intercambio
     sudo swapon /swap
-    #Agrega el fichero crado a /etc/fstab (El espacio de intercambio estará disponible en todo momento) 
+    #Agrega el fichero creado a /etc/fstab (El espacio de intercambio estará disponible en todo momento) 
     sudo echo "swap     /swap   swap    defaults    0 0" >> /etc/fstab
     echo -e "$Yellow \n--- {El área de intercambio ha sido creado con éxito} ---\n $Color_Off"
 }
@@ -184,9 +198,10 @@ InstallWebServer
 LinkDirs
 InstallPHP
 ConfigurePHP
-CreateVirtualHost
 InstallNMap
 InstallPHPMyAdmin
+CreateVirtualHostGNet
+CreateVirtualHostDB
 ConfigSSH
 AssignUserPassword 123 root
 CreateSwap

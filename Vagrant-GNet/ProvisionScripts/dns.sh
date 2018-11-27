@@ -33,6 +33,8 @@ function CreateZone(){
     sudo echo 'zone "gnet.local" {
     type master;
     file "/etc/bind/db.gnet.local";
+    allow-transfer {none;};
+    allow-query {any;};
 };' >> /etc/bind/named.conf.local
 } 
 
@@ -47,7 +49,8 @@ function TranslationsFile(){
                         604800 )    
 @       IN      NS      gnet.local.
 @       IN      A       192.168.0.30
-www     IN      A       192.168.0.20" > /etc/bind/db.gnet.local
+www     IN      A       192.168.0.20
+db      IN      A       192.168.0.20" > /etc/bind/db.gnet.local
     sudo service bind9 restart >> /var/log/vm_build.log 2>&1
     echo -e "$Green \n--- {DNS [Configuración finalizada con éxito]} ---\n $Color_Off"
 }
@@ -74,7 +77,7 @@ function CreateSwap(){
     sudo mkswap /swap >> /var/log/vm_build.log 2>&1
     # habilita el fichero de intercambio
     sudo swapon /swap
-    #Agrega el fichero crado a /etc/fstab (El espacio de intercambio estará disponible en todo momento) 
+    #Agrega el fichero creado a /etc/fstab (El espacio de intercambio estará disponible en todo momento) 
     sudo echo "swap     /swap   swap    defaults    0 0" >> /etc/fstab
     echo -e "$Green \n--- {El área de intercambio ha sido creado correctamente} ---\n $Color_Off"
 }
