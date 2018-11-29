@@ -27,6 +27,7 @@ echo 'phpmyadmin phpmyadmin/app-password-confirm password root' | debconf-set-se
 echo 'phpmyadmin phpmyadmin/mysql/admin-pass password root' | debconf-set-selections
 echo 'phpmyadmin phpmyadmin/mysql/app-pass password root' | debconf-set-selections
 echo 'phpmyadmin phpmyadmin/reconfigure-webserver multiselect apache2' | debconf-set-selections
+echo 'phpmyadmin  phpmyadmin/remote/port string 3306' | debconf-set-selections
 apt-get install phpmyadmin -y
 # Install Composer
 curl -sS https://getcomposer.org/installer | php
