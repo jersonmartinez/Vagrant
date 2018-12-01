@@ -65,14 +65,14 @@ function ConfigureMySQL(){
 
     echo -e "$Cyan \n--- {Configurando MySQL [Reiniciando el servicio]} ---\n $Color_Off"
     # Reiniciando el servicio MySQL
-    sudo systemctl restart mysql.service
+    sudo service mysql restart
 }
 
 function ConfigSSH(){
     echo -e "$Cyan \n--- {Configurando SSH Server [Habilitando las directivas: PasswordAuthentication, PermitRootLogin]} ---\n $Color_Off"
     sed -i 's/PasswordAuthentication/#PasswordAuthentication/g' /etc/ssh/sshd_config
     sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
-    service ssh restart
+    sudo service ssh restart
 }
 
 function AssignUserPassword(){

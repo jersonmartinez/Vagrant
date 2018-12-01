@@ -11,6 +11,9 @@ Yellow='\033[0;33m'       # Yellow
 Purple='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 
+IPDNS="192.168.0.30"
+IPWeb="192.168.0.20"
+
 function UpdateHost(){
     echo -e "$Cyan \n--- {Actualizando la lista de paquetes en el sistema} ---\n $Color_Off"
     sudo apt-get -y update >> /var/log/vm_build.log 2>&1
@@ -48,9 +51,9 @@ function TranslationsFile(){
                         2419200
                         604800 )    
 @       IN      NS      gnet.local.
-@       IN      A       192.168.0.30
-www     IN      A       192.168.0.20
-db      IN      A       192.168.0.20" > /etc/bind/db.gnet.local
+@       IN      A       $IPDNS
+www     IN      A       $IPWeb
+db      IN      A       $IPWeb" > /etc/bind/db.gnet.local
     sudo service bind9 restart >> /var/log/vm_build.log 2>&1
     echo -e "$Green \n--- {DNS [Configuración finalizada con éxito]} ---\n $Color_Off"
 }

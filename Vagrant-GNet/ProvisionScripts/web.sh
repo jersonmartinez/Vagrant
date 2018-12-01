@@ -17,10 +17,14 @@ DBIPHost="192.168.0.10"
 WebServer="apache2"
 
 # Ruta absoluta donde se agregará el proyecto.
-DirStorage="/var/www/"
+DirStorage="/var/www/html"
 
-# Ruta del directorio compartido phpmyadmin
+# Ruta del directorio compartido
 DirShared="/vagrant/GNet"
+
+# DNS and VirtualHosts
+ServerNameGNet="www.gnet.local"
+ServerNameDB="db.gnet.local"
 
 #Crea los directorios que conforman la ruta $DirStorage
 function LinkDirs(){
@@ -45,6 +49,8 @@ function BasePackages(){
 function InstallWebServer(){
     echo -e "$Cyan \n--- {Apache [Instalando servicio]} ---\n $Color_Off"
     sudo apt-get install -y apache2 >> /var/log/vm_build.log 2>&1
+
+    InstallFirewall
 }
 
 function InstallFirewall(){
@@ -94,8 +100,8 @@ function ConfigurePHP(){
     sudo sed -i "s/AllowOverride None/AllowOverride All/g" /etc/apache2/apache2.conf
 
     # Asignando permisos
-    echo -e "$Cyan \n--- Estableciendo permisos para /var/www ---\n $Color_Off"
-    sudo chown -R www-data:www-data /var/www/html/
+    echo -e "$Cyan \n--- Estableciendo permisos para /var/www/html ---\n $Color_Off"
+    sudo chown -R www-data:www-data $DirStorage
 
     # Reiniciar Apache
     echo -e "$Cyan \n--- {PHP [Reiniciando Apache]} ---\n $Color_Off"
@@ -129,17 +135,18 @@ function InstallPHPMyAdmin(){
     sudo sed -i.bak -e "s/\$cfg\['Servers'\]\[\$i\]\['host'\] = \$dbserver;/\$cfg['Servers'][\$i]['host'] = '$DBIPHost';/" /etc/phpmyadmin/config.inc.php
 
     # Creación de enlace simbólico a phpmyadmin
-    ln -s /usr/share/phpmyadmin/ /var/www/
+    ln -s /usr/share/phpmyadmin/ $DirStorage
 }
 
 function CreateVirtualHostGNet(){
     echo -e "$Cyan \n--- {Servidor Web [Configuando sitio virtual GNet]} ---\n $Color_Off"
     sudo echo "<VirtualHost *:80>
-    ServerName www.gnet.local
-    DocumentRoot /var/www/GNet
+    ServerName $ServerNameGNet
+    DocumentRoot $DirStorage/GNet
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>" > /etc/apache2/sites-available/gnet.local.conf
+
     sudo a2ensite gnet.local.conf >> /var/log/vm_build.log 2>&1
     sudo service apache2 restart >> /var/log/vm_build.log 2>&1
 }
@@ -147,11 +154,12 @@ function CreateVirtualHostGNet(){
 function CreateVirtualHostDB(){
     echo -e "$Cyan \n--- {Servidor Web [Configuando sitio virtual phpmyadmin]} ---\n $Color_Off"
     sudo echo "<VirtualHost *:80>
-    ServerName db.gnet.local
-    DocumentRoot /var/www/phpmyadmin
+    ServerName $ServerNameDB
+    DocumentRoot $DirStorage/phpmyadmin
     ErrorLog \${APACHE_LOG_DIR}/error.log
     CustomLog \${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>" > /etc/apache2/sites-available/dbgnet.local.conf
+
     sudo a2ensite dbgnet.local.conf >> /var/log/vm_build.log 2>&1
     sudo service apache2 restart >> /var/log/vm_build.log 2>&1
 }
@@ -176,9 +184,9 @@ function AssignUserPassword(){
 function CreateSwap(){
     echo -e "$Cyan \n--- {Creando área de intercambio} ---\n $Color_Off"
     # Crea un fichero de intercambio de 0.5GB
-    sudo fallocate -l 0.5G /swap 
+    sudo fallocate -l 0.5G /swap
     # Cambiando permisos al fichero (Solo accecible por el usuario root)    
-    sudo chmod 600 /swap            
+    sudo chmod 600 /swap
     # Convierte el fichero como área de intercambio
     sudo mkswap /swap >> /var/log/vm_build.log 2>&1
     # habilita el fichero de intercambio
