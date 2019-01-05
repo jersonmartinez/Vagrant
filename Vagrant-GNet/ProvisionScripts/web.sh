@@ -88,6 +88,8 @@ function InstallPHP(){
     # Instala la librería SSH2
     echo -e "$Cyan \n--- {PHP [Instalando extensión importante: php-ssh2} ---\n $Color_Off"
     sudo apt-get install -y php-ssh2 >> /var/log/vm_build.log 2>&1
+
+    sudo /etc/init.d/apache2 restart >> /var/log/vm_build.log 2>&1
 }
 
 function ConfigurePHP(){
