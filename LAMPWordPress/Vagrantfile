@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
         end
         
         lamp_wp.vm.network "public_network", bridge: "wlan0"
-        lamp_wp.vm.network "private_network", ip: "192.168.0.100"
+        lamp_wp.vm.network "private_network", ip: "192.168.10.100"
         
         lamp_wp.vm.provision "shell", path: "ProvisionScripts/web.sh"
     end

@@ -12,7 +12,7 @@ Purple='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 
 DBPassword="root"
-DBIPHost="192.168.0.100"
+DBIPHost="192.168.10.100"
 # Servidor Web utilizado
 WebServer="apache2"
 

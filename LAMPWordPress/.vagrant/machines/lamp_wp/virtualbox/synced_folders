@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"disabled":false,"type":"rsync","rsync__exclude":[".git/"],"rsync__auto":true,"guestpath":"/vagrant","hostpath":"C:/Users/Side Master/Documents/OpenWebinars/Vagrant/LAMPWordPress","__vagrantfile":true,"exclude":[".git/"],"auto":true,"owner":"vagrant","group":"vagrant"}}}
