@@ -88,6 +88,8 @@ function InstallPHP(){
     # Instala la librería SSH2
     echo -e "$Cyan \n--- {PHP [Instalando extensión importante: php-ssh2} ---\n $Color_Off"
     sudo apt-get install -y php-ssh2 >> /var/log/vm_build.log 2>&1
+
+    sudo /etc/init.d/apache2 restart >> /var/log/vm_build.log 2>&1
 }
 
 function ConfigurePHP(){
@@ -100,8 +102,9 @@ function ConfigurePHP(){
     sudo sed -i "s/AllowOverride None/AllowOverride All/g" /etc/apache2/apache2.conf
 
     # Asignando permisos
-    echo -e "$Cyan \n--- Estableciendo permisos para /var/www/html ---\n $Color_Off"
+    echo -e "$Cyan \n--- Estableciendo permisos para /var/www/html, /vagrant/GNet ---\n $Color_Off"
     sudo chown -R www-data:www-data $DirStorage
+    sudo chown -R www-data:www-data $DirShared
 
     # Reiniciar Apache
     echo -e "$Cyan \n--- {PHP [Reiniciando Apache]} ---\n $Color_Off"

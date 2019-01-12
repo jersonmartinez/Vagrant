@@ -1,0 +1,19 @@
+Vagrant.configure("2") do |config|
+    config.vm.define "lamp_wp", primary: true do |lamp_wp|
+        lamp_wp.vm.box = "ubuntu/xenial64"
+        lamp_wp.vm.hostname = "gnet-web"
+        lamp_wp.vm.synced_folder ".", "/vagrant", disabled: false, type: "rsync", rsync__exclude: [".git/"], rsync__auto: true
+
+        lamp_wp.vm.provider "virtualbox" do |vb|
+            vb.name = "LAMPWordPress"
+            vb.memory = "2048"
+            vb.cpus = "2"
+            vb.linked_clone = true if Gem::Version.new(Vagrant::VERSION) >= Gem::Version.new('1.8.0')
+        end
+        
+        lamp_wp.vm.network "public_network", bridge: "wlan0"
+        lamp_wp.vm.network "private_network", ip: "192.168.10.100"
+        
+        lamp_wp.vm.provision "shell", path: "ProvisionScripts/web.sh"
+    end
+end
