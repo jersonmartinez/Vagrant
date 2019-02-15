@@ -12,7 +12,7 @@ Purple='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 
 # Configuraciones
-DBHOST="192.168.0.10"
+DBHOST="192.168.2.10"
 DBNAME=gnet
 DBUSER=root
 DBPASSWD=root
